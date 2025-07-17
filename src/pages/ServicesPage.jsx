@@ -1,7 +1,7 @@
 function ServicesPage() {
   return (
     <div>
-      <h1>service page</h1>
+      <h1>service page hero</h1>
     </div>
   );
 }
