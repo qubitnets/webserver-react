@@ -3,7 +3,98 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Virtual } from "swiper/modules";
 import "swiper/css";
 import assets from "../assets/assets";
-
+const serviceData = [
+  {
+    id: 1,
+    bgImg: assets.dataanalytics_bg,
+    logo: assets.dataanalytics_logo,
+    subtext: "Data Analytics",
+    description:
+      "Transform raw data into actionable insights through interactive dashboards, reporting, and AI-enhanced analysis.",
+    loadingBehavior: "eager",
+  },
+  {
+    id: 2,
+    bgImg: assets.aidevelopment_bg,
+    logo: assets.cybersecurity_logo,
+    subtext: "AI Development",
+    description:
+      "Design intelligent systems that learn, adapt, and optimize to solve complex challenges and drive smarter business outcomes.",
+    loadingBehavior: "eager",
+  },
+  {
+    id: 3,
+    bgImg: assets.mobileapp_bg,
+    logo: assets.cybersecurity_logo,
+    subtext: "Mobile App Development",
+    description:
+      "Craft seamless, performant mobile applications for iOS and Android tailored to your users’ needs and business goals.",
+    loadingBehavior: "eager",
+  },
+  {
+    id: 4,
+    bgImg: assets.digitalmarketing_bg,
+    logo: assets.cybersecurity_logo,
+    subtext: "Digital Marketing",
+    description:
+      "Boost visibility and conversions with SEO, PPC, content marketing, and personalized multi-channel strategies.",
+    loadingBehavior: "eager",
+  },
+  {
+    id: 5,
+    bgImg: assets.cloud_bg,
+    logo: assets.cybersecurity_logo,
+    subtext: "Cloud Services",
+    description:
+      "Elevate your infrastructure with secure, scalable cloud architecture built for agility, performance, and cost-efficiency.",
+    loadingBehavior: "lazy",
+  },
+  {
+    id: 6,
+    bgImg: assets.nocode_bg,
+    logo: assets.cybersecurity_logo,
+    subtext: "No Code Solution",
+    description:
+      "Accelerate digital transformation with intuitive no-code tools that enable rapid deployment without engineering overhead.",
+    loadingBehavior: "lazy",
+  },
+  {
+    id: 7,
+    bgImg: assets.automation_bg,
+    logo: assets.cybersecurity_logo,
+    subtext: "Automation & Monitoring",
+    description:
+      "Optimize uptime and performance with smart automation, real-time alerts, and predictive system monitoring.",
+    loadingBehavior: "lazy",
+  },
+  {
+    id: 8,
+    bgImg: assets.macinelearning_bg,
+    logo: assets.cybersecurity_logo,
+    subtext: "Machine Learning",
+    description:
+      "Deploy intelligent ML models that analyze patterns, forecast trends, and fuel data-driven innovation.",
+    loadingBehavior: "lazy",
+  },
+  {
+    id: 9,
+    bgImg: assets.webdevelopment_bg,
+    logo: assets.webdevelopment_logo,
+    subtext: "Web Development",
+    description:
+      "Build modern, secure, and durationscalable web platforms optimized for speed, user experience, and SEO.",
+    loadingBehavior: "lazy",
+  },
+  {
+    id: 10,
+    bgImg: assets.cybersecurity_bg,
+    logo: assets.cybersecurity_logo,
+    subtext: "Cybersecurity",
+    description:
+      "Safeguard your digital assets with end-to-end security strategies, threat intelligence, and compliance solutions.",
+    loadingBehavior: "lazy",
+  },
+];
 const ServiceCard = memo(function ServiceCard({
   bgImg,
   logo,
@@ -17,12 +108,12 @@ const ServiceCard = memo(function ServiceCard({
   return (
     <div className="h-full w-full rounded-4xl p-10 flex items-end justify-center will-change-transform">
       <div
-        className={`w-full h-[85%] bg-white rounded-4xl overflow-hidden flex flex-col items-center justify-center relative  border-[20px] border-[#d9d9d9] ${
+        className={`w-full h-[85%] bg-white rounded-4xl overflow-hidden flex flex-col items-center justify-start relative border-[16px] md:border-[20px] border-[#d9d9d9] ${
           isActive ? "border-[#fbb039]" : ""
         }`}
       >
         <div
-          className={`w-full relative  rounded-4xl ${
+          className={`w-full relative top-0 transition-all duration-300 ${
             isOpen ? "h-1/2 " : "h-full"
           }`}
         >
@@ -49,7 +140,7 @@ const ServiceCard = memo(function ServiceCard({
         </div>
 
         <button
-          className={`aspect-square w-10 absolute bottom-5 p-2 rounded-full bg-white/90 transition-transform duration-200 ${
+          className={`aspect-square w-10 absolute bottom-5 lg:bottom-3 p-2 rounded-full bg-white/90 transition-transform duration-200 ${
             isOpen ? "rotate-[270deg] bg-white/20 " : " rotate-90"
           }`}
           onClick={onToggle}
@@ -58,7 +149,7 @@ const ServiceCard = memo(function ServiceCard({
         </button>
 
         {isOpen && (
-          <div className="transition-all duration-500 px-2 pb-3 mt-2 overflow-y-auto h-52 text-sm">
+          <div className="transition-all duration-500 px-2 pb-3 mt-2 overflow-y-auto h-52 text-sm lg:text-base">
             <p>{description}</p>
           </div>
         )}
@@ -74,101 +165,8 @@ const ServicesPage = () => {
     setActiveCardId((prev) => (prev === id ? null : id));
   }, []);
 
-  const serviceData = [
-    {
-      id: 1,
-      bgImg: assets.dataanalytics_bg,
-      logo: assets.dataanalytics_logo,
-      subtext: "Data Analytics",
-      description:
-        "Transform raw data into actionable insights through interactive dashboards, reporting, and AI-enhanced analysis.",
-      loadingBehavior: "eager",
-    },
-    {
-      id: 2,
-      bgImg: assets.aidevelopment_bg,
-      logo: assets.cybersecurity_logo,
-      subtext: "AI Development",
-      description:
-        "Design intelligent systems that learn, adapt, and optimize to solve complex challenges and drive smarter business outcomes.",
-      loadingBehavior: "eager",
-    },
-    {
-      id: 3,
-      bgImg: assets.mobileapp_bg,
-      logo: assets.cybersecurity_logo,
-      subtext: "Mobile App Development",
-      description:
-        "Craft seamless, performant mobile applications for iOS and Android tailored to your users’ needs and business goals.",
-      loadingBehavior: "eager",
-    },
-    {
-      id: 4,
-      bgImg: assets.digitalmarketing_bg,
-      logo: assets.cybersecurity_logo,
-      subtext: "Digital Marketing",
-      description:
-        "Boost visibility and conversions with SEO, PPC, content marketing, and personalized multi-channel strategies.",
-      loadingBehavior: "eager",
-    },
-    {
-      id: 5,
-      bgImg: assets.cloud_bg,
-      logo: assets.cybersecurity_logo,
-      subtext: "Cloud Services",
-      description:
-        "Elevate your infrastructure with secure, scalable cloud architecture built for agility, performance, and cost-efficiency.",
-      loadingBehavior: "lazy",
-    },
-    {
-      id: 6,
-      bgImg: assets.nocode_bg,
-      logo: assets.cybersecurity_logo,
-      subtext: "No Code Solution",
-      description:
-        "Accelerate digital transformation with intuitive no-code tools that enable rapid deployment without engineering overhead.",
-      loadingBehavior: "lazy",
-    },
-    {
-      id: 7,
-      bgImg: assets.automation_bg,
-      logo: assets.cybersecurity_logo,
-      subtext: "Automation & Monitoring",
-      description:
-        "Optimize uptime and performance with smart automation, real-time alerts, and predictive system monitoring.",
-      loadingBehavior: "lazy",
-    },
-    {
-      id: 8,
-      bgImg: assets.macinelearning_bg,
-      logo: assets.cybersecurity_logo,
-      subtext: "Machine Learning",
-      description:
-        "Deploy intelligent ML models that analyze patterns, forecast trends, and fuel data-driven innovation.",
-      loadingBehavior: "lazy",
-    },
-    {
-      id: 9,
-      bgImg: assets.webdevelopment_bg,
-      logo: assets.webdevelopment_logo,
-      subtext: "Web Development",
-      description:
-        "Build modern, secure, and durationscalable web platforms optimized for speed, user experience, and SEO.",
-      loadingBehavior: "lazy",
-    },
-    {
-      id: 10,
-      bgImg: assets.cybersecurity_bg,
-      logo: assets.cybersecurity_logo,
-      subtext: "Cybersecurity",
-      description:
-        "Safeguard your digital assets with end-to-end security strategies, threat intelligence, and compliance solutions.",
-      loadingBehavior: "lazy",
-    },
-  ];
-
   return (
-    <div className="w-full h-[75vh] md:h-screen p-5 relative">
+    <div className="w-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] h-[600px]  md:h-[700px] xl:h-[100vh] p-5 relative">
       <img
         src={assets.union}
         alt="bg-img"
@@ -179,11 +177,11 @@ const ServicesPage = () => {
         <h5 className="text-[#f73d5c] text-lg sm:text-xl font-semibold">
           Our Expertise
         </h5>
-        <h1 className="text-[#3b3b3b] text-xl md:text-2xl font-semibold ">
+        <h1 className="text-[#3b3b3b] text-xl md:text-2xl lg:text-3xl font-semibold ">
           Deep Domain Knowledge.Proven Execution.Scalable Innovation
         </h1>
       </div>
-      <div className="relative h-full w-full z-10">
+      <div className=" relative h-full w-full z-10">
         <Swiper
           modules={[Autoplay, Virtual]}
           virtual
@@ -192,7 +190,7 @@ const ServicesPage = () => {
           centeredSlides={true}
           loop
           autoplay={{
-            delay: window.innerWidth < 768 ? 5000 : 3000,
+            delay: 5000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
