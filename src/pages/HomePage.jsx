@@ -11,8 +11,6 @@ function HomePage() {
 
       <ServicesPage />
 
-      <AboutPage />
-
       <ProductPage />
 
       <TestimonialPage />

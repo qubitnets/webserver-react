@@ -10,8 +10,7 @@ import {
   NavbarItem,
   Button,
 } from "@heroui/react";
-import logo from "../assets/qubitnets_logo.png";
-
+import assets from "../assets/assets";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "AboutUs", path: "/about" },
@@ -41,7 +40,7 @@ export default function Nav() {
       <NavbarContent className="md:hidden pr-3" justify="center">
         <NavbarBrand>
           <img
-            src={logo}
+            src={assets.logo}
             alt="QubitNets Logo"
             className="h-10 sm:w-auto w-28"
           />
@@ -51,7 +50,7 @@ export default function Nav() {
       {/* Desktop Logo */}
       <NavbarContent className="hidden md:flex" justify="start">
         <NavbarBrand>
-          <img src={logo} alt="QubitNets Logo" className="h-12 w-auto" />
+          <img src={assets.logo} alt="QubitNets Logo" className="h-12 w-auto" />
         </NavbarBrand>
       </NavbarContent>
 

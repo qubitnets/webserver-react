@@ -80,7 +80,7 @@ function HeroPage() {
         </div>
 
         <div className="w-full h-full flex items-center justify-center">
-          <div className="aspect-square w-[100%] sm:w-[80%] lg:w-[65%] xl:w-[90%] xl:p-10 p-1 relative flex items-center justify-center left-[40%] xl:left-[45%]">
+          <div className="aspect-square w-[100%] sm:w-[80%] lg:w-[60%] xl:w-[90%] xl:p-10 p-1 relative flex items-center justify-center left-[40%] xl:left-[45%]">
             {/* Circle */}
             <div className="h-full border-[20px] border-[#fbb039] rounded-full flex items-center justify-center p-4 z-10">
               <img
