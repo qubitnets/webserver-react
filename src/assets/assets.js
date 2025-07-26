@@ -19,6 +19,9 @@ import aidevelopment_bg from "./Aidevelopment_bg.webp";
 import pinkarrow from "./right-arrow.webp";
 import product_bg from "./Product_bg.webp";
 import product_1 from "./product_1.webp";
+import testimonials_bg from "./Testimonials_bg.webp";
+import polygon from "./Polygon 3.png";
+import colon from "./Rectangle 76.png";
 const assets = {
   cybersecurity_logo,
   cybersecurity_bg,
@@ -41,5 +44,8 @@ const assets = {
   pinkarrow,
   product_bg,
   product_1,
+  testimonials_bg,
+  polygon,
+  colon,
 };
 export default assets;

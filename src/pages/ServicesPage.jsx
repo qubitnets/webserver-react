@@ -1,6 +1,7 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Virtual } from "swiper/modules";
+import { useInView } from "framer-motion"; // Import useInView
 import "swiper/css";
 import assets from "../assets/assets";
 import { Card } from "../components/Card";
@@ -99,13 +100,36 @@ const serviceData = [
 
 const ServicesPage = () => {
   const [activeCardId, setActiveCardId] = useState(null);
+  const swiperRef = useRef(null);
+  const containerRef = useRef(null);
+
+  // Use InView hook with the container Ref
+  const isInView = useInView(containerRef, {
+    once: false, // Track continuously
+    margin: "-100px", //trigger a little before completely in/out of view
+  });
 
   const handleCardToggle = useCallback((id) => {
     setActiveCardId((prev) => (prev === id ? null : id));
   }, []);
 
+  // Start/stop autoplay based on inView state
+  useEffect(() => {
+    if (!swiperRef.current) return;
+    if (isInView) {
+      console.log("starting");
+      swiperRef.current.autoplay.start();
+    } else {
+      console.log("ending");
+      swiperRef.current.autoplay.stop();
+    }
+  }, [isInView]);
+
   return (
-    <div className="w-full min-h-[500px] h-[600px]  md:h-[700px] xl:h-[100vh] p-5 relative">
+    <div
+      ref={containerRef} // Attach ref to div to observe inView state
+      className="w-full min-h-[500px] h-[600px]  md:h-[700px] xl:h-[100vh] p-5 relative"
+    >
       <img
         src={assets.union}
         alt="bg-img"
@@ -133,8 +157,13 @@ const ServicesPage = () => {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper; // Save swiper instance
+          }}
           onTouchStart={(swiper) => swiper.autoplay.stop()}
-          onTouchEnd={(swiper) => swiper.autoplay.start()}
+          onTouchEnd={(swiper) => {
+            if (isInView) swiper.autoplay.start();
+          }}
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },

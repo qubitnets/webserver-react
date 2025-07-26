@@ -63,12 +63,12 @@ function ProductPage() {
   };
 
   return (
-    <div className="w-full h-[600px] md:h-[680px] xl:h-[85vh] max-sm:mt-2 mt-10 max-sm:p-4 pr-10">
-      <div className="flex max-sm:flex-col items-start max-md:items-center justify-end w-full h-full gap-2 relative">
+    <div className="w-full h-[600px] md:h-[680px] xl:h-[85vh] max-sm:mt-2 mt-10 max-md:p-4 pr-10">
+      <div className="flex max-md:flex-col items-start max-md:items-center justify-end w-full h-full gap-2 relative">
         <img
           src={assets.product_bg}
           alt=""
-          className="bg-contain max-sm:hidden h-full w-[300px] lg:w-[450px] xl:w-1/3"
+          className="bg-contain max-md:hidden h-full w-[300px] lg:w-[450px] xl:w-1/3"
           decoding="async"
           loading="lazy"
         />
@@ -88,7 +88,6 @@ function ProductPage() {
               className="h-full w-full flex max-md:flex-col items-center justify-center gap-7 max-md:gap-4"
             >
               <motion.div
-                key={`left-${index}`}
                 className="h-full w-full overflow-hidden rounded-2xl relative will-change-transform"
                 custom={direction}
                 variants={variants}
@@ -105,10 +104,7 @@ function ProductPage() {
                   decoding="async"
                 />
               </motion.div>
-              <div
-                key={`right-${index}`}
-                className="max-md:h-1/3 h-full max-md:w-full md:w-[400px] lg:w-[600px] xl:w-[700px] rounded-2xl overflow-hidden relative flex flex-col"
-              >
+              <div className="max-md:h-1/3 h-full max-md:w-full md:w-[400px] lg:w-[600px] xl:w-[700px] rounded-2xl overflow-hidden relative flex flex-col">
                 <motion.img
                   src={currentSlide.cardImg}
                   alt=""
