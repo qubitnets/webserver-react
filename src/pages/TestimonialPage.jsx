@@ -76,10 +76,11 @@ function TestimonialPage() {
         </div>
       </div>
       <div className="col-span-2 flex flex-col items-center justify-center">
-        <h3 className="text-[#f73d5c] text-2xl">Testimonials</h3>
+        <h3 className="text-[#f73d5c] text-2xl"><i>Testimonials</i></h3>
         <p className="text-xl md:text-3xl text-center p-3">
-          "Our clients don't just give feedback-they share transformation
-          stories."
+          <em>
+            "Our clients don't just give feedback-they share transformation
+            stories."</em>
         </p>
       </div>
       <div

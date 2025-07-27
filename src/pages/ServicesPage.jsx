@@ -138,10 +138,10 @@ const ServicesPage = () => {
       />
       <div className="text-center absolute left-0 right-0 top-3.5 flex flex-col items-center justify-center gap-3">
         <h5 className="text-[#f73d5c] text-lg sm:text-xl font-semibold">
-          Our Expertise
+          <i>  Our Expertise</i>
         </h5>
         <h1 className="text-[#3b3b3b] text-xl md:text-2xl lg:text-3xl font-semibold ">
-          Deep Domain Knowledge.Proven Execution.Scalable Innovation
+          <em> Deep Domain Knowledge.Proven Execution.Scalable Innovation </em>
         </h1>
       </div>
       <div className=" relative h-full w-full z-10">

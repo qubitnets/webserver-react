@@ -26,7 +26,7 @@ export default function Nav() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-white z-50"
+      className="bg-white/60 z-50 backdrop-blur-2xl"
       maxWidth="full"
     >
       {/* Mobile Menu Toggle */}
@@ -63,11 +63,10 @@ export default function Nav() {
           >
             <Link
               to={link.path}
-              className={`text-md transition-opacity ${
-                location.pathname === link.path
+              className={`text-md transition-opacity ${location.pathname === link.path
                   ? "font-semibold text-[#fa9c07]  px-1 border-b-2 border-[#fa9c07]"
                   : ""
-              }`}
+                }`}
             >
               {link.label}
             </Link>
@@ -105,11 +104,10 @@ export default function Nav() {
           <NavbarMenuItem key={link.path}>
             <Link
               to={link.path}
-              className={`w-full text-lg ${
-                location.pathname === link.path
+              className={`w-full text-lg ${location.pathname === link.path
                   ? "text-[#fa9c07] font-medium"
                   : "text-base"
-              }`}
+                }`}
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
