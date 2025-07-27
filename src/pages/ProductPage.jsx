@@ -74,11 +74,11 @@ function ProductPage() {
         />
         <div className="w-full h-2/12 flex flex-col items-center justify-center gap-2 xl:p-4">
           <h3 className="text-[#f73d5c] font-semibold xl:text-xl">
-            Our Work, Your Success
+            <i> Our Work, Your Success</i>
           </h3>
           <h1 className="text-center text-base xl:text-xl">
-            "Solving complex challenges with smart, scalable solutions that
-            drive real impact."
+            <em> "Solving complex challenges with smart, scalable solutions that
+              drive real impact."</em>
           </h1>
         </div>
         <div className="md:absolute bottom-7 left-20 border-3 border-[#fbb039] w-[90%] max-w-[1900px] h-[460px] md:h-[500px] lg:h-[530px] xl:h-[65vh] rounded-3xl bg-white p-2.5 overflow-hidden will-change-transform">

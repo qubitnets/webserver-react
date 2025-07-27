@@ -46,16 +46,17 @@ function HeroPage() {
           <div className="w-full h-full flex flex-col items-center justify-center gap-3 md:gap-6">
             <div className="flex items-center justify-center gap-2">
               <h3 className="text-lg sm:text-4xl xl:text-3xl 2xl:text-4xl text-[#4f4f50]">
-                Welcome To
+                <i>Welcome To </i>
               </h3>
               <h3 className="text-xl sm:text-4xl xl:text-3xl 2xl:text-4xl text-[#fa9c07]">
-                Qubitnets
+                <i>Qubitnets</i>
               </h3>
             </div>
             <h1 className="text-center text-lg sm:text-xl md:text-2xl lg:text-3xl/snug lg:px-4 xl:text-2xl 2xl:text-3xl text-[#444444] font-semibold sm:p-2">
-              "Empowering the future with intelligent solutions from AI to
-              automation, we transform bold ideas into scalable digital
-              realities."
+              <em>
+                "Empowering the future with intelligent solutions from AI to
+                automation, we transform bold ideas into scalable digital
+                realities."</em>
             </h1>
             <div className="flex items-center justify-center gap-4 mt-3">
               <Button
@@ -98,15 +99,13 @@ function HeroPage() {
                     key={item.text}
                     layout
                     transition={{ duration: 0.6, type: "spring" }}
-                    className={`py-2 px-2 md:py-3 bg-white rounded-xl shadow-lg drop-shadow-xl text-center xl:text-lg md:text-lg lg:text-xl 2xl:text-xl ${
-                      index === 2 || index === 3 || index === 4 || index === 5
-                        ? "w-56 text-xs px-2 text-black font-semibold sm:w-sm lg:w-lg lg:px-4 xl:px-2 xl:w-md 2xl:w-xl xl:left-[-10px] lg:left-[0px]"
-                        : "w-36 text-xs text-[#515151] font-medium sm:w-52 lg:w-56 xl:w-52 2xl:w-64"
-                    } ${
-                      index % 2 === 0
+                    className={`py-2 px-2 md:py-3 bg-white rounded-xl shadow-lg drop-shadow-xl text-center xl:text-lg md:text-lg lg:text-xl 2xl:text-xl ${index === 2 || index === 3 || index === 4 || index === 5
+                      ? "w-56 text-xs px-2 text-black font-semibold sm:w-sm lg:w-lg lg:px-4 xl:px-2 xl:w-md 2xl:w-xl xl:left-[-10px] lg:left-[0px]"
+                      : "w-36 text-xs text-[#515151] font-medium sm:w-52 lg:w-56 xl:w-52 2xl:w-64"
+                      } ${index % 2 === 0
                         ? "justify-self-end"
                         : "relative left-[0px]"
-                    }`}
+                      }`}
                   >
                     {item.text}
                   </motion.div>
