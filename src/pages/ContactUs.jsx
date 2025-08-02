@@ -70,36 +70,41 @@ function ContactUs() {
   };
 
   return (
-    <div className="grid grid-cols-2 grid-rows-1 gap-4 p-14 bg-[#f7f7f7] min-h-[500px]">
+    <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 p-6 sm:p-8 md:p-10 lg:p-12 bg-[#f7f7f7] min-h-[500px]">
       {/* Left Section */}
-      <div className="flex flex-col items-start justify-start gap-4">
-        <h1 className="text-5xl font-medium text-[#3D405B]">Get In Touch</h1>
-        <h3 className="text-lg text-[#3D405B]">
+      <div className="order-1 flex flex-col items-start justify-start gap-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#3D405B]">
+          Get In Touch
+        </h1>
+        <h3 className="text-base md:text-lg text-[#3D405B]">
           For customer support and query, get in touch with us.
         </h3>
+
         {details.map((detail, index) => (
           <div
             key={index}
-            className="flex items-center justify-start gap-8 mt-1 text-[#3D405B]"
+            className="flex items-center justify-start gap-6 sm:gap-8 mt-1 text-[#3D405B]"
           >
-            <div className="aspect-square h-16 bg-white rounded-full p-1 flex items-center justify-center">
-              <img src={detail.logo} alt="" className="h-4/5" />
+            <div className="aspect-square h-12 sm:h-14 md:h-16 bg-white rounded-full p-2 flex items-center justify-center">
+              <img src={detail.logo} alt="" className="h-full object-contain" />
             </div>
             <div className="flex flex-col items-start">
-              <h2 className="text-xl font-semibold">{detail.text}</h2>
-              <p className="text-base">{detail.subText}</p>
+              <h2 className="text-lg md:text-xl font-semibold">
+                {detail.text}
+              </h2>
+              <p className="text-sm md:text-base">{detail.subText}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Right Section */}
+      {/* Right Section (Form) */}
       {!saveSuccess && (
-        <div className="flex flex-col items-start justify-center gap-4 w-full">
-          <h1 className="text-5xl font-medium text-[#3D405B]">
+        <div className="order-2 flex flex-col items-start justify-center gap-4 w-full">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#3D405B]">
             Submit Details
           </h1>
-          <h3 className="text-lg text-[#3D405B]">
+          <h3 className="text-base md:text-lg text-[#3D405B]">
             Fill in your details below & we will get back to you soon!
           </h3>
 
@@ -191,18 +196,19 @@ function ContactUs() {
             <button
               type="button"
               onClick={handleSubmit}
-              className="w-full py-4 px-4 text-base font-medium tracking-wide text-white capitalize rounded border border-rose-100 bg-gradient-to-r from-rose-500 via-rose-400 to-rose-300 hover:from-rose-300 hover:via-rose-400 hover:to-rose-500  hover:border-rose-400 transition-all duration-150"
+              className="w-full py-4 px-4 text-base font-medium tracking-wide text-white capitalize rounded border border-rose-100 bg-gradient-to-r from-rose-500 via-rose-400 to-rose-300 hover:from-rose-300 hover:via-rose-400 hover:to-rose-500 hover:border-rose-400 transition-all duration-150"
             >
               Send Message
             </button>
           </form>
         </div>
       )}
-      {/* Success Message */}
+
+      {/* Success Message Section */}
       {saveSuccess && (
-        <div className="w-full flex flex-col items-center justify-evenly space-x-4 py-4 px-4 text-base tracking-wide  rounded-xl border-4 border-[#fa9c07] overflow-hidden">
+        <div className="order-2 w-full flex flex-col items-center justify-center gap-4 py-4 px-4 text-base tracking-wide rounded-xl border-4 border-[#fa9c07] overflow-hidden">
           <motion.div
-            className="aspect-square h-1/2"
+            className="aspect-square w-24 sm:w-36"
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             transition={{
@@ -210,10 +216,14 @@ function ContactUs() {
               ease: "linear",
             }}
           >
-            <img src={assets.cycling} alt="" className="h-full w-full" />
+            <img
+              src={assets.cycling}
+              alt=""
+              className="w-full h-full object-contain"
+            />
           </motion.div>
           <motion.span
-            className="text-2xl"
+            className="text-lg sm:text-xl md:text-2xl"
             initial={{ y: 200 }}
             animate={{ y: 0 }}
             transition={{ duration: 1.2 }}
