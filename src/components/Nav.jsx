@@ -10,8 +10,7 @@ import {
   NavbarItem,
   Button,
 } from "@heroui/react";
-import logo from "../assets/qubitnets_logo.png";
-
+import assets from "../assets/assets";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "AboutUs", path: "/about" },
@@ -27,7 +26,7 @@ export default function Nav() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-white z-50"
+      className="bg-white/60 z-50 backdrop-blur-2xl"
       maxWidth="full"
     >
       {/* Mobile Menu Toggle */}
@@ -41,7 +40,7 @@ export default function Nav() {
       <NavbarContent className="md:hidden pr-3" justify="center">
         <NavbarBrand>
           <img
-            src={logo}
+            src={assets.logo}
             alt="QubitNets Logo"
             className="h-10 sm:w-auto w-28"
           />
@@ -51,7 +50,7 @@ export default function Nav() {
       {/* Desktop Logo */}
       <NavbarContent className="hidden md:flex" justify="start">
         <NavbarBrand>
-          <img src={logo} alt="QubitNets Logo" className="h-12 w-auto" />
+          <img src={assets.logo} alt="QubitNets Logo" className="h-12 w-auto" />
         </NavbarBrand>
       </NavbarContent>
 
@@ -64,11 +63,10 @@ export default function Nav() {
           >
             <Link
               to={link.path}
-              className={`text-md transition-opacity ${
-                location.pathname === link.path
+              className={`text-md transition-opacity ${location.pathname === link.path
                   ? "font-semibold text-[#fa9c07]  px-1 border-b-2 border-[#fa9c07]"
                   : ""
-              }`}
+                }`}
             >
               {link.label}
             </Link>
@@ -106,11 +104,10 @@ export default function Nav() {
           <NavbarMenuItem key={link.path}>
             <Link
               to={link.path}
-              className={`w-full text-lg ${
-                location.pathname === link.path
+              className={`w-full text-lg ${location.pathname === link.path
                   ? "text-[#fa9c07] font-medium"
                   : "text-base"
-              }`}
+                }`}
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}

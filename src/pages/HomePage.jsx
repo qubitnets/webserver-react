@@ -1,21 +1,14 @@
-import AboutPage from "./AboutPage";
-import HeroPage from "./HeroPage";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+import Testimonial from "../components/Testimonial";
 import ProductPage from "./ProductPage";
-import ServicesPage from "./ServicesPage";
-import TestimonialPage from "./TestimonialPage";
-
 function HomePage() {
   return (
     <>
-      <HeroPage />
-
-      <ServicesPage />
-
-      <AboutPage />
-
+      <Hero />
+      <Services />
       <ProductPage />
-
-      <TestimonialPage />
+      <Testimonial />
     </>
   );
 }
