@@ -7,6 +7,11 @@ import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./components/Footer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RefundPolicy from "./pages/RefundPolicy";
+import Return from "./pages/Return";
+import TandC from "./pages/TandC";
+import Attribution from "./pages/Attribution";
 
 function App() {
   return (
@@ -18,6 +23,11 @@ function App() {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/refundPolicy" element={<RefundPolicy />} />
+        <Route path="/returnPolicy" element={<Return />} />
+        <Route path="/t&c" element={<TandC />} />
+        <Route path="/attribution" element={<Attribution />} />
       </Routes>
       <Footer />
     </BrowserRouter>
