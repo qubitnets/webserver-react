@@ -98,7 +98,7 @@ const serviceData = [
   },
 ];
 
-const ServicesPage = () => {
+const Services = () => {
   const [activeCardId, setActiveCardId] = useState(null);
   const swiperRef = useRef(null);
   const containerRef = useRef(null);
@@ -138,7 +138,7 @@ const ServicesPage = () => {
       />
       <div className="text-center absolute left-0 right-0 top-3.5 flex flex-col items-center justify-center gap-3">
         <h5 className="text-[#f73d5c] text-lg sm:text-xl font-semibold">
-          <i>  Our Expertise</i>
+          <i> Our Expertise</i>
         </h5>
         <h1 className="text-[#3b3b3b] text-xl md:text-2xl lg:text-3xl font-semibold ">
           <em> Deep Domain Knowledge.Proven Execution.Scalable Innovation </em>
@@ -190,4 +190,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default Services;

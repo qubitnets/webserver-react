@@ -30,7 +30,7 @@ const testimonials = [
   },
 ];
 
-function TestimonialPage() {
+function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef(null);
   const carouselRef = useRef(null);
@@ -155,4 +155,4 @@ function TestimonialPage() {
   );
 }
 
-export default TestimonialPage;
+export default Testimonial;

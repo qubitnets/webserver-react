@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { Button } from "@heroui/react";
 import assets from "../assets/assets";
@@ -26,7 +27,7 @@ function rotateSpiral(data) {
   return newData;
 }
 
-function HeroPage() {
+function Hero() {
   const [boxData, setBoxData] = useState(boxDataArray);
   const heroRef = useRef(null);
   const isInView = useInView(heroRef, { margin: "-100px" });
@@ -56,7 +57,8 @@ function HeroPage() {
               <em>
                 "Empowering the future with intelligent solutions from AI to
                 automation, we transform bold ideas into scalable digital
-                realities."</em>
+                realities."
+              </em>
             </h1>
             <div className="flex items-center justify-center gap-4 mt-3">
               <Button
@@ -68,6 +70,8 @@ function HeroPage() {
                 View All Services
               </Button>
               <Button
+                as={Link}
+                to="/contact"
                 size="md"
                 radius="md"
                 variant="ghost"
@@ -99,13 +103,15 @@ function HeroPage() {
                     key={item.text}
                     layout
                     transition={{ duration: 0.6, type: "spring" }}
-                    className={`py-2 px-2 md:py-3 bg-white rounded-xl shadow-lg drop-shadow-xl text-center xl:text-lg md:text-lg lg:text-xl 2xl:text-xl ${index === 2 || index === 3 || index === 4 || index === 5
-                      ? "w-56 text-xs px-2 text-black font-semibold sm:w-sm lg:w-lg lg:px-4 xl:px-2 xl:w-md 2xl:w-xl xl:left-[-10px] lg:left-[0px]"
-                      : "w-36 text-xs text-[#515151] font-medium sm:w-52 lg:w-56 xl:w-52 2xl:w-64"
-                      } ${index % 2 === 0
+                    className={`py-2 px-2 md:py-3 bg-white rounded-xl shadow-lg drop-shadow-xl text-center xl:text-lg md:text-lg lg:text-xl 2xl:text-xl ${
+                      index === 2 || index === 3 || index === 4 || index === 5
+                        ? "w-56 text-xs px-2 text-black font-semibold sm:w-sm lg:w-lg lg:px-4 xl:px-2 xl:w-md 2xl:w-xl xl:left-[-10px] lg:left-[0px]"
+                        : "w-36 text-xs text-[#515151] font-medium sm:w-52 lg:w-56 xl:w-52 2xl:w-64"
+                    } ${
+                      index % 2 === 0
                         ? "justify-self-end"
                         : "relative left-[0px]"
-                      }`}
+                    }`}
                   >
                     {item.text}
                   </motion.div>
@@ -119,4 +125,4 @@ function HeroPage() {
   );
 }
 
-export default HeroPage;
+export default Hero;

@@ -22,6 +22,9 @@ import product_1 from "./product_1.webp";
 import testimonials_bg from "./Testimonials_bg.webp";
 import polygon from "./Polygon 3.png";
 import colon from "./Rectangle 76.png";
+import cycling from "./cycling.png";
+import email from "./email.png";
+import address from "./placeholder.png";
 const assets = {
   cybersecurity_logo,
   cybersecurity_bg,
@@ -47,5 +50,8 @@ const assets = {
   testimonials_bg,
   polygon,
   colon,
+  cycling,
+  email,
+  address,
 };
 export default assets;
