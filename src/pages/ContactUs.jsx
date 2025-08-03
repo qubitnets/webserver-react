@@ -14,7 +14,6 @@ function ContactUs() {
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
   const [loading, setLoading] = useState(false);
-
   const details = [
     {
       text: "Email:",
@@ -61,13 +60,16 @@ function ContactUs() {
     };
 
     try {
-      const response = await fetch(`/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
 
