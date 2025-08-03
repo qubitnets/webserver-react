@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CircularProgress } from "@heroui/react";
 import { motion } from "framer-motion";
 import assets from "../assets/assets";
 function ContactUs() {
@@ -9,9 +10,10 @@ function ContactUs() {
   const [country, setCountry] = useState("");
   const [postalcode, setPostalcode] = useState("");
   const [message, setMessage] = useState("");
-
   const [errors, setErrors] = useState({});
   const [saveSuccess, setSaveSuccess] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const details = [
     {
@@ -46,26 +48,57 @@ function ContactUs() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = () => {
-    if (validate()) {
-      console.log("Submitted:", {
-        userName,
-        email,
-        phone,
-        company,
-        postalcode,
-        country,
-        message,
+  const handleSubmit = async () => {
+    if (!validate()) return;
+    setLoading(true);
+    const data = {
+      userName,
+      email,
+      phone,
+      company,
+      postalcode,
+      message,
+    };
+
+    try {
+      const response = await fetch(`/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+
+      const result = await response.json();
+
+      setSaveSuccess(true); // Show response section
+
+      if (response.ok) {
+        setResponseMessage(
+          result.message || "Your message was sent successfully."
+        );
+        setUserName("");
+        setEmail("");
+        setPhone("");
+        setCompany("");
+        setPostalcode("");
+        setCountry("");
+        setMessage("");
+      } else {
+        setResponseMessage(
+          result.message || "Something went wrong. Please try again later."
+        );
+      }
+    } catch (error) {
       setSaveSuccess(true);
-      setTimeout(() => setSaveSuccess(false), 5000);
-      setUserName("");
-      setEmail("");
-      setPhone("");
-      setCompany("");
-      setPostalcode("");
-      setCountry("");
-      setMessage("");
+      setResponseMessage("Network error. Please try again later.");
+      console.error("Submit error:", error);
+    } finally {
+      setLoading(false);
+      setTimeout(() => {
+        setSaveSuccess(false);
+        setResponseMessage("");
+      }, 5000);
     }
   };
 
@@ -117,7 +150,7 @@ function ContactUs() {
               setValue={setUserName}
               error={errors.userName}
               inputClass={inputClass}
-              placeholder="Steve"
+              placeholder="jatin"
             />
             <InputField
               label="Email"
@@ -198,7 +231,19 @@ function ContactUs() {
               onClick={handleSubmit}
               className="w-full py-4 px-4 text-base font-medium tracking-wide text-white capitalize rounded border border-rose-100 bg-gradient-to-r from-rose-500 via-rose-400 to-rose-300 hover:from-rose-300 hover:via-rose-400 hover:to-rose-500 hover:border-rose-400 transition-all duration-150"
             >
-              Send Message
+              {loading ? (
+                <div className="flex justify-center items-center ">
+                  <CircularProgress
+                    label="Sending Response..."
+                    classNames={{
+                      indicator: "stroke-white",
+                      track: "stroke-white/30",
+                    }}
+                  />
+                </div>
+              ) : (
+                "Send Message"
+              )}
             </button>
           </form>
         </div>
@@ -223,12 +268,12 @@ function ContactUs() {
             />
           </motion.div>
           <motion.span
-            className="text-lg sm:text-xl md:text-2xl"
+            className="text-lg sm:text-xl md:text-2xl w-full text-center"
             initial={{ y: 200 }}
             animate={{ y: 0 }}
             transition={{ duration: 1.2 }}
           >
-            Your query has been successfully sent!
+            {responseMessage}
           </motion.span>
         </div>
       )}
