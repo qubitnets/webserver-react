@@ -25,6 +25,9 @@ import colon from "./Rectangle 76.png";
 import cycling from "./cycling.png";
 import email from "./email.png";
 import address from "./placeholder.png";
+import servicequbit from "./servicequbit.jpeg";
+import hero from "./hero.avif";
+import services_common_bg from "./Services_common_bg.webp";
 const assets = {
   cybersecurity_logo,
   cybersecurity_bg,
@@ -53,5 +56,8 @@ const assets = {
   cycling,
   email,
   address,
+  servicequbit,
+  hero,
+  services_common_bg,
 };
 export default assets;
