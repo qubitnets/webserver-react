@@ -34,9 +34,8 @@ const Serviceccta = () => {
           className={`
               transition-all duration-300
               border-2 border-[#fbb039]
-              bg-white text-black
-              text-xs sm:text-sm px-2 py-1
-              md:bg-[#fbb039] md:text-white md:px-3 md:py-1 
+              text-xs sm:text-sm px-6 py-4
+              bg-[#fbb039] text-white md:px-3 md:py-1 
               md:text-base lg:text-md 
               hover:bg-white hover:text-[#fa9c07]
               active:bg-[#fbb039] active:text-white 

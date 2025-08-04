@@ -62,6 +62,8 @@ function Hero() {
             </h1>
             <div className="flex items-center justify-center gap-4 mt-3">
               <Button
+                as={Link}
+                to="/services"
                 size="md"
                 radius="md"
                 variant="faded"
