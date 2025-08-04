@@ -28,6 +28,8 @@ import address from "./placeholder.png";
 import servicequbit from "./servicequbit.jpeg";
 import hero from "./hero.avif";
 import services_common_bg from "./Services_common_bg.webp";
+import dataanalytics_product from "./dataanalytics_product.webp";
+import cybersecurity_product from "./cybersecurity_product.webp";
 const assets = {
   cybersecurity_logo,
   cybersecurity_bg,
@@ -59,5 +61,7 @@ const assets = {
   servicequbit,
   hero,
   services_common_bg,
+  dataanalytics_product,
+  cybersecurity_product,
 };
 export default assets;
