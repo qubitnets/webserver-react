@@ -266,6 +266,7 @@ function ContactUs() {
             <img
               src={assets.cycling}
               alt=""
+              loading="eager"
               className="w-full h-full object-contain"
             />
           </motion.div>

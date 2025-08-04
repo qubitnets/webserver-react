@@ -1,6 +1,9 @@
 import { memo } from "react";
+import { Button } from "@heroui/react";
+import { Link } from "react-router-dom";
 import assets from "../assets/assets";
 export const Card = memo(function ServiceCard({
+  id,
   bgImg,
   logo,
   subtext,
@@ -38,9 +41,16 @@ export const Card = memo(function ServiceCard({
             <h3 className="text-white text-sm md:text-md font-bold tracking-wider">
               {subtext}
             </h3>
-            <button className="bg-[#ffffff]/60 py-1 px-2  rounded-2xl font-medium hover:bg-[#ffffff]/80 hover:text-[#f73d5c] transition-all duration-500 hover:scale-105 mt-2 hover:w-[80%] active:w-[80%] active:scale-105  active:bg-[#ffffff]/80 text-xs sm:text-sm md:text-md ">
+            <Button
+              as={Link}
+              to={`/service/${id}`}
+              size="sm"
+              variant="flat"
+              radius="sm"
+              className={`bg-[#ffffff]/60 py-1 px-2  rounded-2xl font-medium  data-[hover=true]:!bg-[#ffffff]/80 data-[hover=true]:!text-[#f73d5c] data-[hover=true]:!scale-105 mt-2 data-[hover=true]:!w-[80%] transition-all duration-500 active:!w-[80%] active:!scale-105 active:bg-[#ffffff]/80 text-xs sm:text-sm md:text-md text-black `}
+            >
               Explore Service
-            </button>
+            </Button>
           </div>
         </div>
 
