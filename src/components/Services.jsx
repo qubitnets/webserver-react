@@ -18,7 +18,7 @@ const serviceData = [
   {
     id: "ai-development",
     bgImg: assets.aidevelopment_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.aidevelopment_logo,
     subtext: "AI Development",
     description:
       "Design intelligent systems that learn, adapt, and optimize to solve complex challenges and drive smarter business outcomes.",
@@ -27,7 +27,7 @@ const serviceData = [
   {
     id: "mobile-app-development",
     bgImg: assets.mobileapp_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.mobileapp_logo,
     subtext: "Mobile App Development",
     description:
       "Craft seamless, performant mobile applications for iOS and Android tailored to your users’ needs and business goals.",
@@ -36,7 +36,7 @@ const serviceData = [
   {
     id: "digital-marketing",
     bgImg: assets.digitalmarketing_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.digitalmarketing_logo,
     subtext: "Digital Marketing",
     description:
       "Boost visibility and conversions with SEO, PPC, content marketing, and personalized multi-channel strategies.",
@@ -45,7 +45,7 @@ const serviceData = [
   {
     id: "cloud-services",
     bgImg: assets.cloud_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.cloud_logo,
     subtext: "Cloud Services",
     description:
       "Elevate your infrastructure with secure, scalable cloud architecture built for agility, performance, and cost-efficiency.",
@@ -54,7 +54,7 @@ const serviceData = [
   {
     id: "no-code-solution",
     bgImg: assets.nocode_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.nocode_logo,
     subtext: "No Code Solution",
     description:
       "Accelerate digital transformation with intuitive no-code tools that enable rapid deployment without engineering overhead.",
@@ -63,7 +63,7 @@ const serviceData = [
   {
     id: "automation-monitoring",
     bgImg: assets.automation_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.automation_logo,
     subtext: "Automation & Monitoring",
     description:
       "Optimize uptime and performance with smart automation, real-time alerts, and predictive system monitoring.",
