@@ -51,11 +51,12 @@ function ProductSlide({ currentSlide, isLoading, handleSlideChange }) {
     >
       <div className="h-full w-full overflow-hidden rounded-2xl relative will-change-transform">
         {isLoading && (
-          <div className="absolute inset-0 bg-gray-300 animate-pulse z-10" />
+          <div className="absolute inset-0 bg-gray-500 animate-pulse z-10" />
         )}
         <img
           src={currentSlide.mainImg}
           alt=""
+          
           loading={currentSlide.loading}
           className="h-full w-full object-cover"
         />
