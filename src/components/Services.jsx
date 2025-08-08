@@ -7,7 +7,7 @@ import assets from "../assets/assets";
 import { Card } from "../components/Card";
 const serviceData = [
   {
-    id: 1,
+    id: "data-analytics",
     bgImg: assets.dataanalytics_bg,
     logo: assets.dataanalytics_logo,
     subtext: "Data Analytics",
@@ -16,70 +16,61 @@ const serviceData = [
     loadingBehavior: "eager",
   },
   {
-    id: 2,
+    id: "ai-development",
     bgImg: assets.aidevelopment_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.aidevelopment_logo,
     subtext: "AI Development",
     description:
       "Design intelligent systems that learn, adapt, and optimize to solve complex challenges and drive smarter business outcomes.",
     loadingBehavior: "eager",
   },
   {
-    id: 3,
+    id: "mobile-app-development",
     bgImg: assets.mobileapp_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.mobileapp_logo,
     subtext: "Mobile App Development",
     description:
       "Craft seamless, performant mobile applications for iOS and Android tailored to your users’ needs and business goals.",
     loadingBehavior: "eager",
   },
   {
-    id: 4,
+    id: "digital-marketing",
     bgImg: assets.digitalmarketing_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.digitalmarketing_logo,
     subtext: "Digital Marketing",
     description:
       "Boost visibility and conversions with SEO, PPC, content marketing, and personalized multi-channel strategies.",
     loadingBehavior: "eager",
   },
   {
-    id: 5,
+    id: "cloud-services",
     bgImg: assets.cloud_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.cloud_logo,
     subtext: "Cloud Services",
     description:
       "Elevate your infrastructure with secure, scalable cloud architecture built for agility, performance, and cost-efficiency.",
     loadingBehavior: "lazy",
   },
   {
-    id: 6,
+    id: "no-code-solution",
     bgImg: assets.nocode_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.nocode_logo,
     subtext: "No Code Solution",
     description:
       "Accelerate digital transformation with intuitive no-code tools that enable rapid deployment without engineering overhead.",
     loadingBehavior: "lazy",
   },
   {
-    id: 7,
+    id: "automation-monitoring",
     bgImg: assets.automation_bg,
-    logo: assets.cybersecurity_logo,
+    logo: assets.automation_logo,
     subtext: "Automation & Monitoring",
     description:
       "Optimize uptime and performance with smart automation, real-time alerts, and predictive system monitoring.",
     loadingBehavior: "lazy",
   },
   {
-    id: 8,
-    bgImg: assets.macinelearning_bg,
-    logo: assets.cybersecurity_logo,
-    subtext: "Machine Learning",
-    description:
-      "Deploy intelligent ML models that analyze patterns, forecast trends, and fuel data-driven innovation.",
-    loadingBehavior: "lazy",
-  },
-  {
-    id: 9,
+    id: "software-development",
     bgImg: assets.webdevelopment_bg,
     logo: assets.webdevelopment_logo,
     subtext: "Web Development",
@@ -88,7 +79,7 @@ const serviceData = [
     loadingBehavior: "lazy",
   },
   {
-    id: 10,
+    id: 9,
     bgImg: assets.cybersecurity_bg,
     logo: assets.cybersecurity_logo,
     subtext: "Cybersecurity",
@@ -117,10 +108,8 @@ const Services = () => {
   useEffect(() => {
     if (!swiperRef.current) return;
     if (isInView) {
-      console.log("starting");
       swiperRef.current.autoplay.start();
     } else {
-      console.log("ending");
       swiperRef.current.autoplay.stop();
     }
   }, [isInView]);
