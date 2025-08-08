@@ -12,7 +12,7 @@ function Footer() {
   ];
 
   return (
-    <div className="w-full bg-amber-200 rounded-t-3xl mt-2 px-4 py-6 md:px-10 md:py-8">
+    <div className="w-full  rounded-t-3xl mt-2 px-4 py-6 md:px-10 md:py-8" style={{ backgroundColor: "#fbb039" }}>
       <div className="flex flex-col md:grid md:grid-cols-2 md:gap-8">
         {/* Connect Section */}
         <div className="mb-8 md:mb-0">
