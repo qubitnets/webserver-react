@@ -109,6 +109,8 @@ import {
   CloudIcon,
   PuzzlePieceIcon,
   ChartBarSquareIcon,
+   GlobeAltIcon,
+   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
 
 const services = [
@@ -136,6 +138,18 @@ const services = [
     desc: "Delivering custom software solutions to improve operational efficiency and support business innovation.",
     icon: <CodeBracketIcon className="w-7 h-7 text-blue-600" />,
   },
+  {
+  id: "web-development",
+  title: "WEB DEVELOPMENT",
+  desc: "Building fast, responsive, and scalable websites to strengthen your digital presence and engage users effectively.",
+  icon: <GlobeAltIcon className="w-7 h-7 text-blue-600" />,
+},
+{
+  id: "cyber-security",
+  title: "CYBER SECURITY",
+  desc: "Protecting digital assets with advanced threat detection, prevention strategies, and regulatory compliance solutions.",
+  icon: <ShieldCheckIcon className="w-7 h-7 text-blue-600" />,
+},
   {
     id: "digital-marketing",
     title: "DIGITAL MARKETING",
