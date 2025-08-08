@@ -55,7 +55,7 @@ const AboutService = () => {
             key={idx}
             className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-transform duration-300 group"
           >
-            <div className="text-3xl mb-4">{feature.icon}</div>
+            <div className="text-3xl mb-4 ">{feature.icon}</div>
             <h3 className="text-lg font-bold text-blue-700 mb-2 group-hover:text-blue-800">
               {feature.title}
             </h3>

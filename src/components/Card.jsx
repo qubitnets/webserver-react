@@ -16,7 +16,7 @@ export const Card = memo(function ServiceCard({
   return (
     <div className="h-full w-full rounded-4xl p-10 flex items-end justify-center will-change-transform">
       <div
-        className={`w-full h-[85%] bg-white rounded-4xl overflow-hidden flex flex-col items-center justify-start relative border-[16px] md:border-[20px] border-[#d9d9d9] ${
+        className={`w-full h-[85%] bg-white rounded-4xl shadow-lg overflow-hidden flex flex-col items-center justify-start relative border-[16px] md:border-[20px] border-[#d9d9d9] ${
           isActive ? "border-[#fbb039]" : ""
         }`}
       >

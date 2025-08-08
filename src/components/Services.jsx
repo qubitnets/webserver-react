@@ -108,10 +108,8 @@ const Services = () => {
   useEffect(() => {
     if (!swiperRef.current) return;
     if (isInView) {
-      console.log("starting");
       swiperRef.current.autoplay.start();
     } else {
-      console.log("ending");
       swiperRef.current.autoplay.stop();
     }
   }, [isInView]);

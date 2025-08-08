@@ -1,193 +1,135 @@
-import { useEffect, useState } from "react";
-import assets from "../assets/assets";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
+import assets from "../assets/assets"; // adjust path as needed
 
-const slides = [
-  {
-    mainImg: assets.product_1,
-    cardImg: assets.webdevelopment_bg,
-    logo: assets.webdevelopment_logo,
-    field: "Web Development",
-    name: "SmartCart Pro - Modern Shopping Experience",
-    loading: "eager",
-  },
-  {
-    mainImg: assets.cybersecurity_product,
-    cardImg: assets.cybersecurity_bg,
-    logo: assets.cybersecurity_logo,
-    field: "Cybersecurity",
-    name: "ShieldGuard AI - Real-time Threat Protection",
-    loading: "eager",
-  },
-  {
-    mainImg: assets.dataanalytics_product,
-    cardImg: assets.dataanalytics_bg,
-    logo: assets.dataanalytics_logo,
-    field: "Data Analytics",
-    name: "InsightFlow - Advanced Data Intelligence Platform",
-    loading: "eager",
-  },
-];
-
-const loadedImages = new Set();
-
-function preloadImageOptimized(src) {
-  return new Promise((resolve) => {
-    if (loadedImages.has(src)) return resolve();
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      loadedImages.add(src);
-      resolve();
-    };
-    img.onerror = resolve;
-  });
-}
-
-function ProductSlide({ currentSlide, isLoading, handleSlideChange }) {
-  return (
-    <div
-      key={currentSlide.field}
-      className="h-full w-full flex max-md:flex-col items-center justify-center gap-5 max-md:gap-4"
+const ProductSection = ({ product, reverse, id }) => (
+  <motion.section
+    id={id}
+    className={`flex flex-col md:flex-row items-center gap-10 my-16 ${
+      reverse ? "md:flex-row-reverse" : ""
+    }`}
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, type: "spring" }}
+    viewport={{ once: true, amount: 0.3 }}
+  >
+    {/* Image */}
+    <motion.div
+      className="md:w-1/2 w-full flex justify-center"
+      initial={{ scale: 0.9 }}
+      whileInView={{ scale: 1 }}
+      transition={{ duration: 0.6 }}
     >
-      <div className="h-full w-full overflow-hidden rounded-2xl relative will-change-transform">
-        {isLoading && (
-          <div className="absolute inset-0 bg-gray-300 animate-pulse z-10" />
-        )}
-        <img
-          src={currentSlide.mainImg}
-          alt=""
-          loading={currentSlide.loading}
-          className="h-full w-full object-cover"
-        />
-      </div>
-      <div className="max-md:h-2/5 h-full max-md:w-full md:w-[400px] lg:w-[600px] xl:w-[700px] rounded-2xl overflow-hidden relative flex flex-col">
-        <img
-          src={currentSlide.cardImg}
-          alt=""
-          loading={currentSlide.loading}
-          className="absolute inset-0 h-full w-full object-cover will-change-transform"
-        />
-        <div className="relative w-full h-full bg-black/40 flex max-md:flex-row flex-col items-center max-md:items-start max-md:py-3 justify-center gap-4 max-md:gap-2 max-md:px-3.5">
-          <div className="bg-white/40 backdrop-blur-lg w-2/3 rounded-full flex items-center justify-center p-1 max-md:hidden">
-            <h1 className="text-xs lg:text-lg text-white font-bold text-center">
-              {currentSlide.field}
-            </h1>
-          </div>
-          <div className="aspect-square h-10 lg:h-20">
-            <img
-              src={currentSlide.logo}
-              loading={currentSlide.loading}
-              alt=""
-              className="w-full h-full"
-            />
-          </div>
-          <div className="flex items-center justify-center w-[90%]">
-            <h1 className="max-md:text-[11px] lg:text-xl text-white font-bold text-center">
-              {currentSlide.name}
-            </h1>
-          </div>
-          <button
-            type="button"
-            className="bg-[#fbb039] px-2 py-1 rounded-full max-md:w-20 w-1/2 max-md:p-1 max-md:text-[12px] mb-3 font-medium hover:w-1/3 transition-all duration-300 hover:bg-[#fbb039]/90"
-          >
-            Explore
-          </button>
-        </div>
-        <div className="flex justify-evenly items-center gap-3 absolute bottom-3 w-full">
-          <button
-            type="button"
-            onClick={() => handleSlideChange(-1)}
-            className="bg-[#fbb039]/80 aspect-square w-11 p-3 rounded-full rotate-180 max-md:w-7 max-md:p-2 hover:bg-[#fbb039]"
-            aria-label="Previous Slide"
-          >
-            <img
-              src={assets.blackarrow}
-              alt=""
-              className="h-full w-full bg-contain"
-            />
-          </button>
-          <button
-            type="button"
-            onClick={() => handleSlideChange(1)}
-            className="bg-[#fbb039]/80 aspect-square w-11 p-3 rounded-full max-md:w-7 max-md:p-2 hover:bg-[#fbb039]"
-            aria-label="Next Slide"
-          >
-            <img
-              src={assets.blackarrow}
-              alt=""
-              className="h-full w-full bg-contain"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
+      <img
+        src={product.image}
+        alt={product.title}
+        className="rounded-xl shadow-lg w-full max-w-md object-cover"
+      />
+    </motion.div>
 
-function ProductPage() {
-  const [index, setIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const currentSlide = slides[index];
+    {/* Text */}
+    <motion.div
+      className="md:w-1/2 w-full"
+      initial={{ x: reverse ? 80 : -80, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.7, type: "spring", delay: 0.2 }}
+    >
+      <h2 className="text-3xl font-bold mb-4 text-[#fbb039]">
+        {product.title}
+      </h2>
+      <p className="text-lg mb-5 text-gray-700">{product.description}</p>
+      <ul className="mb-2">
+        {product.features.map((feature, idx) => (
+          <li key={idx} className="flex items-start gap-2 mb-2">
+            <CheckCircleIcon className="w-6 h-6 text-[#f73d5c] shrink-0 mt-0.5" />
+            <span className="text-gray-800">{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  </motion.section>
+);
+
+export default function ProductPage() {
+  const products = [
+    {
+      title: "Ecommerce Branding Platform",
+      description:
+        "Our ecommerce branding platform is the culmination of 5 years of dedicated experience... We empower businesses to build uniquely branded online stores that connect deeply with their customers.",
+      features: [
+        "Developed with 5 years of specialized experience in ecommerce technology and brand marketing.",
+        "Proprietary customization tools for brand colors, logos, typography, and messaging.",
+        "Trusted by businesses seeking to elevate digital presence.",
+        "Continuously improved by Qubitnets Technologies team.",
+        "Creates a memorable brand experience.",
+      ],
+      image: assets.ecommerce,
+    },
+    {
+      title: "Interior Design: Qubitnet AI",
+      description:
+        "Qubitnet revolutionizes interior design with AI technology by offering instant wallpaper application, color customization, object design modification, style transfer, image recommendations, and inpainting.",
+      features: [
+        "Wallpaper Application: Instant Room Makeovers",
+        "Color Customization: Real-Time Visual Experiments",
+        "Object Design Modification: Virtually Swap Furniture",
+        "Style Transfer: Merge Room Textures Creatively",
+        "Image Recommendations: Personalized Design Inspiration",
+        "Inpainting: Seamless Object Removal & Repair",
+        "Advanced Image Processing with Grounding DINO and SAM models.",
+      ],
+      image: assets.interiordesign,
+    },
+    {
+      title: "BizAssist Pro",
+      description:
+        "BizAssist Pro is a cloud-based, no-code business management platform on Bubble.io focused on streamlining operations, enhancing customer relationships, and driving growth.",
+      features: [
+        "Sales Management System",
+        "Customer Database Management",
+        "Automated Marketing Campaigns",
+        "Smart Chatbot Integration",
+        "Customer Feedback Survey System",
+        "Reporting and Analytics Dashboard",
+      ],
+      image: assets.ecommerce, // Use correct image if available
+    },
+  ];
 
   useEffect(() => {
-    setIsLoading(true);
-
-    const current = slides[index];
-    const next = slides[(index + 1) % slides.length];
-    const prev = slides[(index - 1 + slides.length) % slides.length];
-
-    const imagesToPreload = [
-      current.mainImg,
-      current.cardImg,
-      current.logo,
-      next.mainImg,
-      next.cardImg,
-      next.logo,
-      prev.mainImg,
-      prev.cardImg,
-      prev.logo,
-    ];
-
-    Promise.all(imagesToPreload.map(preloadImageOptimized))
-      .then(() => setIsLoading(false))
-      .catch(() => setIsLoading(false));
-  }, [index]);
-
-  const handleSlideChange = (dir) => {
-    setIndex((i) => (i + dir + slides.length) % slides.length);
-  };
+    if (typeof window !== "undefined" && window.location.hash) {
+      const id = window.location.hash.substring(1); // strip #
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 1000);
+      }
+    }
+  }, []);
 
   return (
-    <div className="w-full min-h-[600px] h-[600px] md:h-[680px] xl:h-[85vh] max-sm:mt-2 mt-10 max-md:p-4 pr-10">
-      <div className="flex max-md:flex-col items-start max-md:items-center justify-end w-full h-full gap-2 relative">
-        <img
-          src={assets.product_bg}
-          alt=""
-          className="bg-contain max-md:hidden h-full w-[300px] lg:w-[450px] xl:w-1/3"
-          decoding="async"
-          loading="lazy"
-        />
-        <div className="w-full h-2/12 flex flex-col items-center justify-center gap-2 xl:p-4">
-          <h3 className="text-[#f73d5c] font-semibold xl:text-xl">
-            <i> Our Work, Your Success</i>
-          </h3>
-          <h1 className="text-center text-base xl:text-xl">
-            <em>
-              "Solving complex challenges with smart, scalable solutions that
-              drive real impact."
-            </em>
-          </h1>
-        </div>
-        <div className="min-h-[450px] md:absolute bottom-7 left-20 border-3 border-[#fbb039] w-[90%] max-w-[1900px] h-[460px] md:h-[500px] lg:h-[520px] xl:h-[65vh] rounded-3xl bg-white p-2.5 overflow-hidden will-change-transform">
-          <ProductSlide
-            currentSlide={currentSlide}
-            isLoading={isLoading}
-            handleSlideChange={handleSlideChange}
+    <main className="bg-gray-50 min-h-screen px-4 md:px-10 py-10">
+      <header className="max-w-4xl mx-auto mb-14 text-center ">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-5 text-[#f73d5c]">
+          Project Showcase
+        </h1>
+        <p className="text-lg md:text-2xl text-black">
+          Discover our modern solutions, powered by the latest in technology and
+          design.
+        </p>
+      </header>
+      <div>
+        {products.map((product, idx) => (
+          <ProductSection
+            key={product.title}
+            product={product}
+            reverse={idx % 2 === 1}
+            id={`product-${idx}`}
           />
-        </div>
+        ))}
       </div>
-    </div>
+    </main>
   );
 }
-
-export default ProductPage;

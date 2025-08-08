@@ -35,6 +35,8 @@ import hero from "./hero.avif";
 import services_common_bg from "./Services_common_bg.webp";
 import dataanalytics_product from "./dataanalytics_product.webp";
 import cybersecurity_product from "./cybersecurity_product.webp";
+import ecommerce from "./Ecommerce.webp";
+import interiordesign from "./Interiordesign.webp";
 const assets = {
   cybersecurity_logo,
   cybersecurity_bg,
@@ -73,5 +75,7 @@ const assets = {
   cloud_logo,
   digitalmarketing_logo,
   automation_logo,
+  ecommerce,
+  interiordesign,
 };
 export default assets;
