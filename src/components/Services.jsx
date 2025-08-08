@@ -70,7 +70,7 @@ const serviceData = [
     loadingBehavior: "lazy",
   },
   {
-    id: "software-development",
+    id: "web-development",
     bgImg: assets.webdevelopment_bg,
     logo: assets.webdevelopment_logo,
     subtext: "Web Development",
@@ -79,7 +79,7 @@ const serviceData = [
     loadingBehavior: "lazy",
   },
   {
-    id: 9,
+    id: "cyber-security",
     bgImg: assets.cybersecurity_bg,
     logo: assets.cybersecurity_logo,
     subtext: "Cybersecurity",
