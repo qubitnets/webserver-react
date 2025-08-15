@@ -132,12 +132,12 @@ const services = [
     desc: "Designing seamless, scalable mobile solutions tailored to business goals across iOS and Android platforms.",
     icon: <DevicePhoneMobileIcon className="w-7 h-7 text-blue-600" />,
   },
-  {
-    id: "software-development",
-    title: "SOFTWARE DEVELOPMENT",
-    desc: "Delivering custom software solutions to improve operational efficiency and support business innovation.",
-    icon: <CodeBracketIcon className="w-7 h-7 text-blue-600" />,
-  },
+  // {
+  //   id: "software-development",
+  //   title: "SOFTWARE DEVELOPMENT",
+  //   desc: "Delivering custom software solutions to improve operational efficiency and support business innovation.",
+  //   icon: <CodeBracketIcon className="w-7 h-7 text-blue-600" />,
+  // },
   {
   id: "web-development",
   title: "WEB DEVELOPMENT",
