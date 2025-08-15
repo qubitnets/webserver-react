@@ -1,9 +1,18 @@
-function AboutPage() {
+import React from 'react'
+import AboutQubit from '../components/AboutQubit'
+import AboutHeader from '../components/AboutHeader'
+import Legacy from '../components/Legacy'
+import AboutScroll from '../components/AboutScroll'
+
+const AboutPage = () => {
   return (
-    <div className="w-full min-h-[500px] h-[600px]  md:h-[700px] xl:h-[100vh] bg-gray-100">
-      <h1>aboutus</h1>
-    </div>
-  );
+    <>
+    <AboutHeader/>
+    <AboutQubit/>
+    <Legacy/>
+    <AboutScroll/>
+    </>
+  )
 }
 
-export default AboutPage;
+export default AboutPage
