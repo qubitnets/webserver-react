@@ -85,6 +85,33 @@ function Attribution() {
       title: "Iconjam",
       text: "Icons created by Iconjam - Flaticon",
     },
+
+    // 🔹 Newly added ones
+    {
+      href: "https://www.flaticon.com/free-icons/instagram",
+      title: "instagram icons",
+      text: "Instagram icons created by edt.im - Flaticon",
+    },
+    {
+      href: "https://www.flaticon.com/free-icons/facebook",
+      title: "facebook icons",
+      text: "Facebook icons created by Chanut-is-Industries - Flaticon",
+    },
+    {
+      href: "https://www.flaticon.com/free-icons/tweet",
+      title: "tweet icons",
+      text: "Tweet icons created by Freepik - Flaticon",
+    },
+    {
+      href: "https://www.flaticon.com/free-icons/linkedin",
+      title: "linkedin icons",
+      text: "Linkedin icons created by Stockio - Flaticon",
+    },
+    {
+      href: "https://www.flaticon.com/free-icons/yumminky",
+      title: "yumminky icons",
+      text: "Yumminky icons created by Yumminky - Flaticon",
+    },
   ];
 
   return (
