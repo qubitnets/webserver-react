@@ -93,7 +93,7 @@ export default function ProductPage() {
         "Customer Feedback Survey System",
         "Reporting and Analytics Dashboard",
       ],
-      image: assets.ecommerce, // Use correct image if available
+      image: assets.dataanalytics_product, // Use correct image if available
     },
   ];
 

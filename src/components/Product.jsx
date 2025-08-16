@@ -75,7 +75,7 @@ function ProductSlide({
         />
         <div className="relative w-full h-full bg-black/40 flex max-md:flex-row flex-col items-center max-md:items-start max-md:py-3 justify-center gap-4 max-md:gap-2 max-md:px-3.5">
           <div className="bg-white/40 backdrop-blur-lg w-2/3 rounded-full flex items-center justify-center p-1 max-md:hidden">
-            <h1 className="text-xs lg:text-lg text-white font-bold text-center">
+            <h1 className="text-sm lg:text-lg text-white font-bold text-center">
               {currentSlide.field}
             </h1>
           </div>
@@ -88,7 +88,7 @@ function ProductSlide({
             />
           </div>
           <div className="flex items-center justify-center w-[90%]">
-            <h1 className="max-md:text-[11px] lg:text-xl text-white font-bold text-center">
+            <h1 className="max-md:text-[16px] lg:text-xl text-white font-bold text-center">
               {currentSlide.name}
             </h1>
           </div>

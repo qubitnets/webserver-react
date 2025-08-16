@@ -164,58 +164,158 @@ OutcomeBenefits: {
   ]
 },
  },
-
-  "software-development": {
-   OutcomeBenefits: {
-  benefits: [
-    {
-      title: "Custom Solutions",
-      description: "Create tailored software that perfectly fits your business needs. Address unique challenges with flexibility and precision. Ensure your solutions evolve alongside your business strategies."
-    },
-    {
-      title: "Improved Productivity",
-      description: "Streamline workflows and automate repetitive tasks. Enhance team efficiency and reduce time-to-delivery. Empower your workforce to focus on strategic initiatives."
-    },
-    {
-      title: "Robust Security",
-      description: "Incorporate best-in-class security practices to protect sensitive data. Minimize risks and ensure compliance with industry standards. Build trust with clients through reliable data protection."
-    },
-    {
-      title: "Seamless Integration",
-      description: "Develop software that easily connects with your existing systems. Enable smooth data flow and unified operations. Facilitate collaboration by breaking down technology silos."
-    },
-  ],
+"web-development": {
+  "OutcomeBenefits": {
+    "benefits": [
+      {
+        "title": "Responsive & Accessible Design",
+        "description": "Create modern, mobile-friendly websites that are inclusive and easy to navigate across devices and user types."
+      },
+      {
+        "title": "Enhanced Brand Visibility",
+        "description": "Strengthen your digital presence with high-performing, SEO-optimized web solutions that attract and retain visitors."
+      },
+      {
+        "title": "Optimized Performance",
+        "description": "Ensure fast loading speeds, smooth interactions, and minimal downtime to deliver a seamless user experience."
+      },
+      {
+        "title": "Scalable Architecture",
+        "description": "Develop websites built for growth — flexible and future-ready as your business needs evolve."
+      }
+    ]
+  },
+  "OverviewProcess": {
+    "steps": [
+      {
+        "id": 1,
+        "title": "Planning & Discovery",
+        "description": "Understand business goals, user personas, and technical needs to create a roadmap that aligns with your brand.",
+        "icon": "🧭"
+      },
+      {
+        "id": 2,
+        "title": "Design & Prototyping",
+        "description": "Design user interfaces and prototypes that reflect your visual identity and optimize user experience.",
+        "icon": "🖍️"
+      },
+      {
+        "id": 3,
+        "title": "Development & Integration",
+        "description": "Code responsive layouts and features using modern frameworks, integrating with third-party services as needed.",
+        "icon": "🧰"
+      },
+      {
+        "id": 4,
+        "title": "Launch & Optimization",
+        "description": "Deploy the website with performance tuning, SEO setup, and analytics for ongoing improvement.",
+        "icon": "🚀"
+      }
+    ]
+  }
+},
+"cyber-security": {
+  "OutcomeBenefits": {
+    "benefits": [
+      {
+        "title": "Advanced Threat Protection",
+        "description": "Proactively detect and prevent malware, phishing, and intrusion attempts with cutting-edge tools."
+      },
+      {
+        "title": "Data Privacy & Integrity",
+        "description": "Ensure confidentiality and consistency of sensitive data through encryption and access control."
+      },
+      {
+        "title": "Compliance Readiness",
+        "description": "Meet legal and industry standards like GDPR, ISO 27001, and HIPAA through secure frameworks."
+      },
+      {
+        "title": "Business Continuity",
+        "description": "Respond to incidents swiftly and restore systems with minimal disruption through robust recovery planning."
+      }
+    ]
+  },
+  "OverviewProcess": {
+    "steps": [
+      {
+        "id": 1,
+        "title": "Security Assessment",
+        "description": "Audit systems and networks to identify weaknesses and evaluate potential threat surfaces.",
+        "icon": "🔍"
+      },
+      {
+        "id": 2,
+        "title": "Policy & Strategy Development",
+        "description": "Create cybersecurity protocols, response playbooks, and risk management strategies tailored to your operations.",
+        "icon": "📘"
+      },
+      {
+        "id": 3,
+        "title": "Implementation of Controls",
+        "description": "Deploy tools like firewalls, IDS, encryption, and MFA to protect against internal and external threats.",
+        "icon": "🛡️"
+      },
+      {
+        "id": 4,
+        "title": "Monitoring & Incident Response",
+        "description": "Continuously monitor systems and respond swiftly to alerts, reducing impact and preventing escalation.",
+        "icon": "📡"
+      }
+    ]
+  }
 }
 ,
-    OverviewProcess: {
-  steps: [
-    {
-      id: 1,
-      title: "Requirement Analysis & Planning",
-      description: "Collect and analyze stakeholders’ needs, define the project scope, estimate resources and costs, and draft a comprehensive plan for development. Establish objectives and create a clear roadmap.",
-      icon: "📝"
-    },
-    {
-      id: 2,
-      title: "Design & Development",
-      description: "Craft detailed software architecture and UI/UX designs, then translate them into working software by coding both frontend and backend components.",
-      icon: "🎨"
-    },
-    {
-      id: 3,
-      title: "Testing & Deployment",
-      description: "Systematically test the software for defects, usability, performance, and security issues, then deploy to production with proper configuration.",
-      icon: "🧪"
-    },
-    {
-      id: 4,
-      title: "Maintenance & Updates",
-      description: "Provide ongoing support, address user feedback, resolve issues, and release enhancements or updates to ensure continued performance and relevance of the software.",
-      icon: "🔄"
-    }
-  ]
-},
-},
+//   "software-development": {
+//    OutcomeBenefits: {
+//   benefits: [
+//     {
+//       title: "Custom Solutions",
+//       description: "Create tailored software that perfectly fits your business needs. Address unique challenges with flexibility and precision. Ensure your solutions evolve alongside your business strategies."
+//     },
+//     {
+//       title: "Improved Productivity",
+//       description: "Streamline workflows and automate repetitive tasks. Enhance team efficiency and reduce time-to-delivery. Empower your workforce to focus on strategic initiatives."
+//     },
+//     {
+//       title: "Robust Security",
+//       description: "Incorporate best-in-class security practices to protect sensitive data. Minimize risks and ensure compliance with industry standards. Build trust with clients through reliable data protection."
+//     },
+//     {
+//       title: "Seamless Integration",
+//       description: "Develop software that easily connects with your existing systems. Enable smooth data flow and unified operations. Facilitate collaboration by breaking down technology silos."
+//     },
+//   ],
+// }
+// ,
+//     OverviewProcess: {
+//   steps: [
+//     {
+//       id: 1,
+//       title: "Requirement Analysis & Planning",
+//       description: "Collect and analyze stakeholders’ needs, define the project scope, estimate resources and costs, and draft a comprehensive plan for development. Establish objectives and create a clear roadmap.",
+//       icon: "📝"
+//     },
+//     {
+//       id: 2,
+//       title: "Design & Development",
+//       description: "Craft detailed software architecture and UI/UX designs, then translate them into working software by coding both frontend and backend components.",
+//       icon: "🎨"
+//     },
+//     {
+//       id: 3,
+//       title: "Testing & Deployment",
+//       description: "Systematically test the software for defects, usability, performance, and security issues, then deploy to production with proper configuration.",
+//       icon: "🧪"
+//     },
+//     {
+//       id: 4,
+//       title: "Maintenance & Updates",
+//       description: "Provide ongoing support, address user feedback, resolve issues, and release enhancements or updates to ensure continued performance and relevance of the software.",
+//       icon: "🔄"
+//     }
+//   ]
+// },
+// },
 
   "digital-marketing": {
 OutcomeBenefits: {

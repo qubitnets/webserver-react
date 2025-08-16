@@ -37,6 +37,11 @@ import dataanalytics_product from "./dataanalytics_product.webp";
 import cybersecurity_product from "./cybersecurity_product.webp";
 import ecommerce from "./Ecommerce.webp";
 import interiordesign from "./Interiordesign.webp";
+import insta from "./instagram.png";
+import facebook from "./facebook.png";
+import x from "./twitter.png";
+import linkedin from "./linkedin.png";
+import youtube from "./video.png";
 const assets = {
   cybersecurity_logo,
   cybersecurity_bg,
@@ -77,5 +82,10 @@ const assets = {
   automation_logo,
   ecommerce,
   interiordesign,
+  insta,
+  facebook,
+  x,
+  linkedin,
+  youtube,
 };
 export default assets;

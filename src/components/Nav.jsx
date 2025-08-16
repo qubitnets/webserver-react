@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useRef } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
@@ -11,6 +11,7 @@ import {
   Button,
 } from "@heroui/react";
 import assets from "../assets/assets";
+
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "AboutUs", path: "/about" },
@@ -19,8 +20,40 @@ const navLinks = [
 ];
 
 export default function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // Store last clicked path
+  const [lastClickedPath, setLastClickedPath] = useState(location.pathname);
+
+  // Refs to store hover timers
+  const hoverTimer = useRef(null);
+  const leaveTimer = useRef(null);
+
+  const handleClick = (path) => {
+    setLastClickedPath(path);
+    clearTimeout(hoverTimer.current);
+    clearTimeout(leaveTimer.current);
+  };
+
+  const handleMouseEnter = (path) => {
+    clearTimeout(leaveTimer.current);
+    hoverTimer.current = setTimeout(() => {
+      if (path !== location.pathname) {
+        navigate(path, { replace: true });
+      }
+    }, 300); // 200ms delay for smoothness
+  };
+
+  const handleMouseLeave = () => {
+    clearTimeout(hoverTimer.current);
+    leaveTimer.current = setTimeout(() => {
+      if (lastClickedPath !== location.pathname) {
+        navigate(lastClickedPath, { replace: true });
+      }
+    }, 300); // 200ms delay to return smoothly
+  };
 
   return (
     <Navbar
@@ -63,10 +96,14 @@ export default function Nav() {
           >
             <Link
               to={link.path}
-              className={`text-md transition-opacity ${location.pathname === link.path
+              onClick={() => handleClick(link.path)}
+              onMouseEnter={() => handleMouseEnter(link.path)}
+              onMouseLeave={handleMouseLeave}
+              className={`text-md transition-opacity ${
+                location.pathname === link.path
                   ? "font-semibold text-[#fa9c07]  px-1 border-b-2 border-[#fa9c07]"
                   : ""
-                }`}
+              }`}
             >
               {link.label}
             </Link>
@@ -104,11 +141,15 @@ export default function Nav() {
           <NavbarMenuItem key={link.path}>
             <Link
               to={link.path}
-              className={`w-full text-lg ${location.pathname === link.path
+              className={`w-full text-lg ${
+                location.pathname === link.path
                   ? "text-[#fa9c07] font-medium"
                   : "text-base"
-                }`}
-              onClick={() => setIsMenuOpen(false)}
+              }`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                handleClick(link.path);
+              }}
             >
               {link.label}
             </Link>
