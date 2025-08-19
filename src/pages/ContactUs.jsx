@@ -22,7 +22,7 @@ function ContactUs() {
     },
     {
       text: "Office Address:",
-      subText: "QubitNets Technology West Delhi, New Delhi 110018",
+      subText: "QubitNets Technologies West Delhi, New Delhi 110018",
       logo: assets.address,
     },
   ];
@@ -191,25 +191,22 @@ function ContactUs() {
 
             {/* Country Select */}
             <div className="space-y-2">
-              <label className="text-base font-medium text-[#3D405B]/70 before:content-['*'] before:text-[#F14678]">
-                Country or Region
-              </label>
-              <select
-                name="country"
-                value={country}
-                onChange={(e) => setCountry(e.target.value)}
-                className={inputClass("country")}
-              >
-                <option value="">Select One</option>
-                <option value="India">India</option>
-                <option value="America">America</option>
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Sri Lanka">Sri Lanka</option>
-              </select>
-              {errors.country && (
-                <p className="pt-2 text-xs text-red-600">{errors.country}</p>
-              )}
-            </div>
+  <label className="text-base font-medium text-[#3D405B]/70 before:content-['*'] before:text-[#F14678]">
+    Country or Region
+  </label>
+  <input
+    type="text"
+    name="country"
+    value={country}
+    onChange={(e) => setCountry(e.target.value)}
+    className={inputClass("country")}
+    placeholder="Enter your country"
+  />
+  {errors.country && (
+    <p className="pt-2 text-xs text-red-600">{errors.country}</p>
+  )}
+</div>
+
 
             {/* Message */}
             <div className="space-y-2">
