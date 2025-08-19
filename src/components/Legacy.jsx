@@ -13,7 +13,7 @@ function Legacy() {
       </div>
 
       <div className="container mx-auto flex flex-row justify-center items-center mt-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* first card  */}
           <div class=" relative w-70 bg-white rounded-xl overflow-hidden shadow-lg group cursor-pointer transition duration-500 ease-in-out hover:scale-105">
             <div class="h-30 bg-gradient-to-r from-gray-400 to-gray-300 flex items-center justify-center">
@@ -40,7 +40,7 @@ function Legacy() {
             </div>
             <div class="p-6">
               <h3 class="text-4xl text-center font-bold mb-2 text-orange-600">
-                27+
+                5+
               </h3>
               <p class="text-gray-700 mt-4 text-center text-2xl">
                 Years of delivering excellence{" "}
@@ -65,7 +65,7 @@ function Legacy() {
             </div>
             <div class="p-6">
               <h3 class="text-4xl text-center font-bold mb-2 text-orange-600">
-                9,500+
+                100+
               </h3>
               <p class="text-gray-700 mt-5 text-2xl text-center">Employees</p>
             </div>
@@ -101,7 +101,7 @@ function Legacy() {
             </div>
             <div class="p-6">
               <h3 class="text-4xl text-center font-bold mb-2 text-orange-600">
-                350+
+                30+
               </h3>
               <p class="text-gray-700 mt-5 text-2xl text-center">
                 Satisfied clients
@@ -110,7 +110,7 @@ function Legacy() {
           </div>
 
           {/* fourth card  */}
-          <div class="relative w-70 bg-white rounded-xl overflow-hidden shadow-lg group  cursor-pointer transition duration-500 ease-in-out hover:scale-105">
+          {/* <div class="relative w-70 bg-white rounded-xl overflow-hidden shadow-lg group  cursor-pointer transition duration-500 ease-in-out hover:scale-105">
             <div class="h-30 bg-gradient-to-r from-gray-400 to-gray-300 flex items-center justify-center">
               <svg
                 width="64px"
@@ -157,7 +157,7 @@ function Legacy() {
               </h3>
               <p class="text-gray-700 text-center mb-4 text-2xl ">Locations</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

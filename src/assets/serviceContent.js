@@ -10,7 +10,16 @@ import {
   FaProjectDiagram,
 } from "react-icons/fa";
 export const serviceDynamicContent = {
+  
   "data-analytics": {
+HeroData: {
+  bgImage: assets.services_common_bg,
+  title: "Transform Data into Strategic Business Intelligence",
+  subtitle:
+    "Harness the power of advanced analytics to unlock hidden insights, optimize operations, and accelerate business growth.",
+  ctaText: "Get a Free Data Consultation",
+  ctaLink: "#contact",
+},    
 OutcomeBenefits: {
   benefits: [
     {
@@ -62,6 +71,15 @@ OutcomeBenefits: {
   },
 
   "ai-development": {
+    HeroData: {
+  bgImage: assets.ai_bg,
+  title: "AI-Powered Innovation for the Future",
+  subtitle:
+    "Leverage artificial intelligence and machine learning to automate processes, enhance decision-making, and unlock new possibilities.",
+  ctaText: "Discover AI Solutions",
+  ctaLink: "#ai",
+},
+
     OutcomeBenefits: {
   benefits: [
     {
@@ -114,6 +132,15 @@ OutcomeBenefits: {
   },
 
   "mobile-app-development": {
+    HeroData: {
+  bgImage: assets.mobileapp_bg,
+  title: "Innovative Mobile App Solutions",
+  subtitle:
+    "Design and develop powerful mobile applications that deliver seamless user experiences on iOS and Android platforms.",
+  ctaText: "Get Mobile App Solutions",
+  ctaLink: "#mobileapp",
+},
+
 OutcomeBenefits: {
   benefits: [
     {
@@ -165,6 +192,15 @@ OutcomeBenefits: {
 },
  },
 "web-development": {
+  HeroData: {
+  bgImage: assets.webdev_bg,
+  title: "Building Modern Web Experiences",
+  subtitle:
+    "Create fast, responsive, and visually stunning websites tailored to your business needs with the latest web technologies.",
+  ctaText: "Explore Web Development",
+  ctaLink: "#webdev",
+},
+
   "OutcomeBenefits": {
     "benefits": [
       {
@@ -215,6 +251,15 @@ OutcomeBenefits: {
   }
 },
 "cyber-security": {
+  HeroData: {
+  bgImage: assets.cybersecurity_bg,
+  title: "Protect Your Digital Assets with Cybersecurity",
+  subtitle:
+    "Secure your business against modern threats with our advanced cybersecurity frameworks and monitoring systems.",
+  ctaText: "Secure Your Business",
+  ctaLink: "#security",
+},
+
   "OutcomeBenefits": {
     "benefits": [
       {
@@ -318,6 +363,15 @@ OutcomeBenefits: {
 // },
 
   "digital-marketing": {
+    HeroData: {
+  bgImage: assets.digitalmarketing_bg,
+  title: "Drive Growth with Digital Marketing",
+  subtitle:
+    "Expand your reach, engage your audience, and boost conversions with targeted digital marketing strategies that deliver measurable results.",
+  ctaText: "Explore Digital Marketing",
+  ctaLink: "#digitalmarketing",
+},
+
 OutcomeBenefits: {
   benefits: [
     {
@@ -370,6 +424,15 @@ OutcomeBenefits: {
   },
 
   "cloud-services": {
+HeroData: {
+  bgImage: assets.cloud_bg,
+  title: "Cloud Solutions for Modern Businesses",
+  subtitle:
+    "Migrate, scale, and secure your infrastructure with our cloud expertise tailored to your business needs.",
+  ctaText: "Explore Cloud Services",
+  ctaLink: "#cloud",
+},
+
     OutcomeBenefits: {
   benefits: [
     {
@@ -422,6 +485,16 @@ OutcomeBenefits: {
   },
 
   "no-code-solution": {
+    // No-Code Solutions
+HeroData: {
+  bgImage: assets.nocode_bg,
+  title: "Empower Your Business with No-Code Solutions",
+  subtitle:
+    "Rapidly build applications, automate workflows, and streamline processes without writing a single line of code. Perfect for non-technical teams to innovate faster.",
+  ctaText: "Explore No-Code Solutions",
+  ctaLink: "#nocode",
+},
+
  OutcomeBenefits: {
   benefits: [
     {
@@ -474,6 +547,17 @@ OutcomeBenefits: {
   },
 
   "automation-monitoring": {
+   // Automation & Monitoring
+HeroData: {
+  bgImage: assets.automation_bg,
+  title: "Automate & Monitor Your Operations",
+  subtitle:
+    "Implement intelligent automation and real-time monitoring to improve efficiency, reduce risks, and gain actionable insights across your business systems.",
+  ctaText: "Discover Automation Solutions",
+  ctaLink: "#automation",
+},
+
+
 OutcomeBenefits: {
   benefits: [
     {
