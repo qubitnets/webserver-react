@@ -69,7 +69,7 @@ const AboutService = () => {
         {/* Text */}
         <div className="p-8">
           <span className="text-xs font-semibold text-white bg-blue-600 px-3 py-1 rounded-full inline-block mb-4">
-            QUBITNET PLATFORM
+            QUBITNETS PLATFORM
           </span>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             A powerful platform for AI & analytics

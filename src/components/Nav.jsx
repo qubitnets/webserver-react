@@ -14,9 +14,9 @@ import assets from "../assets/assets";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "AboutUs", path: "/about" },
-  { label: "Services", path: "/services" },
   { label: "Product", path: "/product" },
+  { label: "Services", path: "/services" },
+  { label: "AboutUs", path: "/about" },
 ];
 
 export default function Nav() {

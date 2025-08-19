@@ -42,7 +42,7 @@ const ProductSection = ({ product, reverse, id }) => (
       <ul className="mb-2">
         {product.features.map((feature, idx) => (
           <li key={idx} className="flex items-start gap-2 mb-2">
-            <CheckCircleIcon className="w-6 h-6 text-[#f73d5c] shrink-0 mt-0.5" />
+            <CheckCircleIcon className="w-6 h-6 text-[#1ecd15] shrink-0 mt-0.5" />
             <span className="text-gray-800">{feature}</span>
           </li>
         ))}

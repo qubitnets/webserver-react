@@ -30,37 +30,73 @@
 
 // export default HeroDataAnalytics;
 
+// import React from "react";
+// import assets from "../assets/assets";
+// const HeroData = () => {
+//   return (
+//     <section
+//       className="relative h-[90vh] w-full flex items-center justify-center text-white"
+//       style={{
+//         backgroundImage: `url(${assets.services_common_bg})`,
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//       }}
+//     >
+//       {/* Overlay */}
+//       <div className="absolute inset-0 bg-black/37  z-10" />
+
+//       {/* Content */}
+//       <div className="relative z-20 text-center px-6 max-w-4xl">
+//         <h1 className="text-4xl md:text-5xl font-bold mb-4">
+//           Transform Data into Strategic Business Intelligence
+//         </h1>
+//         <p className="text-lg md:text-xl mb-6">
+//           We provide end-to-end data solutions from engineering and science to
+//           advanced analytics, MLOps, and AI-powered operations that drive
+//           intelligent decision-making and business growth.
+//         </p>
+//         {/* <a
+//           href="#solutions"
+//           className="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg text-lg font-semibold"
+//         >
+//           Get Your Data Assessment
+//         </a> */}
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default HeroData;
+
 import React from "react";
-import assets from "../assets/assets";
-const HeroData = () => {
+
+const HeroData = ({ hero }) => {
+  if (!hero) return null;
+
   return (
     <section
       className="relative h-[90vh] w-full flex items-center justify-center text-white"
       style={{
-        backgroundImage: `url(${assets.services_common_bg})`,
+        backgroundImage: `url(${hero.bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/37  z-10" />
+      <div className="absolute inset-0 bg-black/40 z-10" />
 
       {/* Content */}
       <div className="relative z-20 text-center px-6 max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Transform Data into Strategic Business Intelligence
-        </h1>
-        <p className="text-lg md:text-xl mb-6">
-          We provide end-to-end data solutions from engineering and science to
-          advanced analytics, MLOps, and AI-powered operations that drive
-          intelligent decision-making and business growth.
-        </p>
-        {/* <a
-          href="#solutions"
-          className="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg text-lg font-semibold"
-        >
-          Get Your Data Assessment
-        </a> */}
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">{hero.title}</h1>
+        <p className="text-lg md:text-xl mb-6">{hero.subtitle}</p>
+        {hero.ctaText && (
+          <a
+            href={hero.ctaLink || "#"}
+            className="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg text-lg font-semibold"
+          >
+            {hero.ctaText}
+          </a>
+        )}
       </div>
     </section>
   );
