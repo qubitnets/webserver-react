@@ -12,7 +12,10 @@ function Footer() {
   ];
 
   return (
-    <div className="w-full bg-amber-200 rounded-t-3xl mt-2 px-4 py-6 md:px-10 md:py-8">
+    <div
+      className="w-full  rounded-t-3xl mt-2 px-4 py-6 md:px-10 md:py-8"
+      style={{ backgroundColor: "#fbb039" }}
+    >
       <div className="flex flex-col md:grid md:grid-cols-2 md:gap-8">
         {/* Connect Section */}
         <div className="mb-8 md:mb-0">
@@ -25,7 +28,7 @@ function Footer() {
               </div>
               <div>
                 <h2 className="text-sm lg:text-base font-medium">Email:</h2>
-                <p className="text-sm">support@qubitnets.com</p>
+                <p className="text-sm">info@qubitnets.com</p>
               </div>
             </div>
 
@@ -44,13 +47,80 @@ function Footer() {
           </div>
         </div>
 
-        {/* Pricing + Buttons */}
         <div className="flex flex-col justify-between h-full">
-          <div>
-            <h1 className="text-xl md:text-2xl font-semibold mb-2">Pricing</h1>
-            <p className="text-sm mb-6">Consultants charges start from ₹999*</p>
+          <h1 className="text-xl md:text-2xl font-semibold mb-4">Links</h1>
+          <div className="flex flex-wrap items-center gap-2 mb-6 lg:gap-8 ">
+            <div className="flex gap-1 items-center justify-start flex-col">
+              <div className="aspect-square h-10 bg-white rounded-full p-2 flex items-center justify-center">
+                <img src={assets.insta} alt="email" className="h-full" />
+              </div>
+              <div>
+                {/* <h2 className="text-sm lg:text-base">instagram</h2> */}
+                <a
+                  href="#"
+                  className="hover:underline active:underline text-sm font-medium"
+                >
+                  Instagram
+                </a>
+              </div>
+            </div>
+            <div className="flex gap-1 items-center justify-start flex-col">
+              <div className="aspect-square h-10 bg-white rounded-full p-1 flex items-center justify-center">
+                <img src={assets.facebook} alt="email" className="h-full" />
+              </div>
+              <div>
+                {/* <h2 className="text-sm lg:text-base">instagram</h2> */}
+                <a
+                  href="#"
+                  className="hover:underline active:underline text-sm font-medium "
+                >
+                  Facebook
+                </a>
+              </div>
+            </div>
+            <div className="flex gap-1 items-center justify-start flex-col">
+              <div className="aspect-square h-10 bg-white rounded-full p-2 flex items-center justify-center">
+                <img src={assets.x} alt="email" className="h-full" />
+              </div>
+              <div>
+                {/* <h2 className="text-sm lg:text-base">instagram</h2> */}
+                <a
+                  href="#"
+                  className="hover:underline active:underline text-sm font-medium"
+                >
+                  X
+                </a>
+              </div>
+            </div>
+            <div className="flex gap-1 items-center justify-start flex-col">
+              <div className="aspect-square h-10 bg-white rounded-full p-1 flex items-center justify-center">
+                <img src={assets.linkedin} alt="email" className="h-full" />
+              </div>
+              <div>
+                {/* <h2 className="text-sm lg:text-base">instagram</h2> */}
+                <a
+                  href="#"
+                  className="hover:underline active:underline text-sm font-medium"
+                >
+                  Linkedin
+                </a>
+              </div>
+            </div>
+            <div className="flex gap-1 items-center justify-start flex-col">
+              <div className="aspect-square h-10 bg-white rounded-full p-0.5 flex items-center justify-center">
+                <img src={assets.youtube} alt="email" className="h-full" />
+              </div>
+              <div>
+                {/* <h2 className="text-sm lg:text-base">instagram</h2> */}
+                <a
+                  href="#"
+                  className="hover:underline active:underline text-sm font-medium"
+                >
+                  Youtube
+                </a>
+              </div>
+            </div>
           </div>
-
           <div className="flex flex-wrap gap-3">
             {buttonData.map((data, index) => (
               <Button
@@ -70,8 +140,9 @@ function Footer() {
       </div>
 
       {/* Bottom Text */}
-      <div className="mt-8 h-5 border-t border-gray-400 pt-4 text-center text-sm sm:text-base">
-        All Rights Reserved | Copyright © QubitNets.
+      <div className="mt-6  border-t border-gray-400 pt-3 text-center text-sm sm:text-base flex items-center justify-center gap-x-6">
+        <p>All Rights Reserved | Copyright © QubitNets.</p>
+        <p>Consultants charges start from ₹999*</p>
       </div>
     </div>
   );
