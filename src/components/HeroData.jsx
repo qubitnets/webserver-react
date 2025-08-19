@@ -87,12 +87,8 @@ const HeroData = ({ hero }) => {
 
       {/* Content */}
       <div className="relative z-20 text-center px-6 max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          {hero.title}
-        </h1>
-        <p className="text-lg md:text-xl mb-6">
-          {hero.subtitle}
-        </p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">{hero.title}</h1>
+        <p className="text-lg md:text-xl mb-6">{hero.subtitle}</p>
         {hero.ctaText && (
           <a
             href={hero.ctaLink || "#"}
