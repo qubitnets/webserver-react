@@ -121,7 +121,15 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap gap-3">
+           <p>Consultants charges start from ₹999*</p>
+        </div>
+      </div>
+
+      {/* Bottom Text */}
+      <div className="mt-6  border-t border-gray-400 pt-3 text-center text-sm sm:text-base flex items-center justify-center flex-wrap gap-x-6">
+        <p>All Rights Reserved | Copyright © QubitNets.</p>
+       
+        <div className="flex flex-wrap gap-3 mt-4 lg:mt-0">
             {buttonData.map((data, index) => (
               <Button
                 key={index}
@@ -136,13 +144,6 @@ function Footer() {
               </Button>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Bottom Text */}
-      <div className="mt-6  border-t border-gray-400 pt-3 text-center text-sm sm:text-base flex items-center justify-center gap-x-6">
-        <p>All Rights Reserved | Copyright © QubitNets.</p>
-        <p>Consultants charges start from ₹999*</p>
       </div>
     </div>
   );
