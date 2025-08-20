@@ -12,15 +12,12 @@ function Footer() {
   ];
 
   return (
-    <div
-      className="w-full  rounded-t-3xl mt-2 px-4 py-6 md:px-10 md:py-8"
-      style={{ backgroundColor: "#fbb039" }}
-    >
-      <div className="flex flex-col md:grid md:grid-cols-2 md:gap-8">
+    <div className="w-full  rounded-t-3xl mt-2 px-4 py-2 md:px-5 md:py-3 bg-[#fabb55]">
+      <div className="flex flex-col md:grid md:grid-cols-2 md:gap-6">
         {/* Connect Section */}
-        <div className="mb-8 md:mb-0">
+        <div className="mb-4 md:mb-0">
           <h1 className="text-xl md:text-2xl font-semibold mb-4">Connect</h1>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-5">
             {/* Email */}
             <div className="flex gap-4 items-start">
               <div className="aspect-square h-12 bg-white rounded-full p-2 flex items-center justify-center">
@@ -121,29 +118,29 @@ function Footer() {
               </div>
             </div>
           </div>
-           <p>Consultants charges start from ₹999*</p>
+          <p>Consultants charges start from ₹999*</p>
         </div>
       </div>
 
       {/* Bottom Text */}
       <div className="mt-6  border-t border-gray-400 pt-3 text-center text-sm sm:text-base flex items-center justify-center flex-wrap gap-x-6">
         <p>All Rights Reserved | Copyright © QubitNets.</p>
-       
+
         <div className="flex flex-wrap gap-3 mt-4 lg:mt-0">
-            {buttonData.map((data, index) => (
-              <Button
-                key={index}
-                as={Link}
-                to={data.to}
-                size="sm"
-                variant="light"
-                radius="lg"
-                className="text-xs md:text-sm bg-white border-b-1.5   data-[hover=true]:!bg-[#fcba51] data-[hover=true]:!text-white focus:!text-white focus:!bg-[#fcba51] transition-all duration-200"
-              >
-                {data.text}
-              </Button>
-            ))}
-          </div>
+          {buttonData.map((data, index) => (
+            <Button
+              key={index}
+              as={Link}
+              to={data.to}
+              size="sm"
+              variant="light"
+              radius="lg"
+              className="text-xs md:text-sm bg-white border-b-1.5   data-[hover=true]:!bg-[#fcba51] data-[hover=true]:!text-white focus:!text-white focus:!bg-[#fcba51] transition-all duration-200"
+            >
+              {data.text}
+            </Button>
+          ))}
+        </div>
       </div>
     </div>
   );

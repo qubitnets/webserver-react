@@ -39,12 +39,10 @@ function Legacy() {
               </svg>
             </div>
             <div class="p-6">
-              <h3 class="text-4xl text-center font-bold mb-2 text-orange-600">
+              <h3 class="text-4xl text-center font-bold mb-2 text-[#fbb039]">
                 5+
               </h3>
-              <h3 class="text-4xl text-center font-bold mb-2 text-[#fbb039]">
-                27+
-              </h3>
+
               <p class="text-gray-700 mt-4 text-center text-2xl">
                 Years of delivering excellence{" "}
               </p>
@@ -67,12 +65,10 @@ function Legacy() {
               </svg>
             </div>
             <div class="p-6">
-              <h3 class="text-4xl text-center font-bold mb-2 text-orange-600">
+              <h3 class="text-4xl text-center font-bold mb-2 text-[#fbb039]">
                 100+
               </h3>
-              <h3 class="text-4xl text-center font-bold mb-2 text-[#fbb039]">
-                9,500+
-              </h3>
+
               <p class="text-gray-700 mt-5 text-2xl text-center">Employees</p>
             </div>
           </div>
@@ -106,12 +102,10 @@ function Legacy() {
               </svg>
             </div>
             <div class="p-6">
-              <h3 class="text-4xl text-center font-bold mb-2 text-orange-600">
+              <h3 class="text-4xl text-center font-bold mb-2 text-[#fbb039]">
                 30+
               </h3>
-              <h3 class="text-4xl text-center font-bold mb-2 text-[#fbb039]">
-                350+
-              </h3>
+
               <p class="text-gray-700 mt-5 text-2xl text-center">
                 Satisfied clients
               </p>

@@ -25,23 +25,24 @@ import pinkarrow from "./right-arrow.webp";
 import product_bg from "./Product_bg.webp";
 import product_1 from "./product_1.webp";
 import testimonials_bg from "./Testimonials_bg.webp";
-import polygon from "./Polygon 3.png";
-import colon from "./Rectangle 76.png";
-import cycling from "./cycling.png";
-import email from "./email.png";
-import address from "./placeholder.png";
-import servicequbit from "./servicequbit.jpeg";
+import polygon from "./Polygon 3.webp";
+import colon from "./Rectangle 76.webp";
+import cycling from "./cycling.webp";
+import email from "./email.webp";
+import address from "./placeholder.webp";
+import servicequbit from "./servicequbit.webp";
 import hero from "./hero.avif";
 import services_common_bg from "./Services_common_bg.webp";
 import dataanalytics_product from "./dataanalytics_product.webp";
 import cybersecurity_product from "./cybersecurity_product.webp";
 import ecommerce from "./Ecommerce.webp";
 import interiordesign from "./Interiordesign.webp";
-import insta from "./instagram.png";
-import facebook from "./facebook.png";
-import x from "./twitter.png";
-import linkedin from "./linkedin.png";
-import youtube from "./video.png";
+import insta from "./instagram.webp";
+import facebook from "./facebook.webp";
+import x from "./twitter.webp";
+import linkedin from "./linkedin.webp";
+import youtube from "./video.webp";
+import user from "./user.webp";
 const assets = {
   cybersecurity_logo,
   cybersecurity_bg,
@@ -87,5 +88,6 @@ const assets = {
   x,
   linkedin,
   youtube,
+  user,
 };
 export default assets;

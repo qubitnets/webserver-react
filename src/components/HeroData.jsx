@@ -89,14 +89,14 @@ const HeroData = ({ hero }) => {
       <div className="relative z-20 text-center px-6 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{hero.title}</h1>
         <p className="text-lg md:text-xl mb-6">{hero.subtitle}</p>
-        {hero.ctaText && (
+        {/* {hero.ctaText && (
           <a
             href={hero.ctaLink || "#"}
             className="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg text-lg font-semibold"
           >
             {hero.ctaText}
           </a>
-        )}
+        )} */}
       </div>
     </section>
   );
