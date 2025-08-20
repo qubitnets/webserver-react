@@ -6,27 +6,33 @@ import StarRating from "../components/Rating";
 const testimonials = [
   {
     id: 1,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro obcaecati nisi dicta eligendi maxime!Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
-    author: "-- John Doe",
+    text: "Transformed our IT infrastructure. QubitNets Technologies completely upgraded how we manage our workflow and data. Their innovative solutions not only improved efficiency but also reduced operational costs significantly. Truly a dependable partner in tech.",
+    author: "– Pierluigi M. , IT Head, Virtual Contacts",
     rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=200&q=80",
   },
   {
     id: 2,
-    text: "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
-    author: "-- Jane Smith",
+    text: "Reliable and professional tech team. Working with QubitNets was seamless. Their team quickly understood our requirements for cloud migration and executed the project ahead of schedule. The after-support was equally impressive. ",
+    author: " – Rohit Mehta, Founder, Innovex Startups ",
     rating: 4,
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
   },
   {
     id: 3,
-    text: "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
-    author: "-- Alex Johnson",
+    text: "Cutting-edge solutions for our business. The experts at QubitNets helped us implement AI-driven analytics that now power our decision-making. Their ability to blend innovation with practicality makes them stand out in the industry.  ",
+    author: " – Ayesha Khan, COO, RetailNext Pvt. Ltd.  ",
     rating: 3,
-    image:
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=200&q=80",
+  },
+  {
+    id: 4,
+    text: "True technology partners, not just vendors. We consider QubitNets an extension of our own team. Their cybersecurity solutions gave us peace of mind and allowed us to scale faster without worrying about risks. Highly recommend their services.    ",
+    author: " – Nikhil Verma, Director, SecureBank ",
+    rating: 4,
+  },
+  {
+    id: 4,
+    text: "Exceeded expectations with their expertise. From software development to ongoing IT support, QubitNets provided solutions that were tailor-made for our business. The professionalism and talent of their team are truly remarkable.      ",
+    author: "  – Sneha Patel, CEO, EduTech Global ",
+    rating: 3,
   },
 ];
 
@@ -76,11 +82,14 @@ function Testimonial() {
         </div>
       </div>
       <div className="col-span-2 flex flex-col items-center justify-center">
-        <h3 className="text-[#f73d5c] text-2xl"><i>Testimonials</i></h3>
+        <h3 className="text-[#f73d5c] text-2xl">
+          <i>Testimonials</i>
+        </h3>
         <p className="text-xl md:text-3xl text-center p-3">
           <em>
             "Our clients don't just give feedback-they share transformation
-            stories."</em>
+            stories."
+          </em>
         </p>
       </div>
       <div
@@ -109,9 +118,15 @@ function Testimonial() {
                 <div className="flex items-start justify-center gap-4">
                   <div className="flex flex-col items-center justify-center gap-2">
                     <img
-                      src={currentTestimonial.image}
+                      src={
+                        currentTestimonial.image
+                          ? currentTestimonial.image
+                          : assets.user
+                      }
                       alt={currentTestimonial.author}
-                      className="aspect-square w-11 md:w-16 lg:w-20 bg-white rounded-2xl object-cover"
+                      className={`aspect-square w-11 md:w-16 lg:w-20 bg-white rounded-2xl object-cover ${
+                        currentTestimonial.image ? "p-0" : "p-4"
+                      }`}
                     />
                     <StarRating
                       Rating={currentTestimonial.rating}
@@ -120,13 +135,13 @@ function Testimonial() {
                     />
                   </div>
                   <div className="w-full max-sm:max-h-20 md:max-h-24 xl:max-h-20 overflow-y-auto [&::-webkit-scrollbar]:hidden">
-                    <p className="text-xs md:text-base lg:text-lg whitespace-pre-line">
+                    <p className="text-xs md:text-base lg:text-lg whitespace-pre-line text-gray-800">
                       {currentTestimonial.text}
                     </p>
                   </div>
                 </div>
                 <div className="w-full h-full flex items-end justify-end">
-                  <p className="text-sm md:text-sm lg:text-lg font-semibold">
+                  <p className="text-sm md:text-sm lg:text-lg font-semibold text-gray-800">
                     {currentTestimonial.author}
                   </p>
                 </div>
@@ -137,7 +152,7 @@ function Testimonial() {
             </div>
           </div>
           <motion.div
-            className="absolute top-[-23%] md:top-[-21%] lg:top-[-7%] xl:top-[-4%] right-[10%]"
+            className="absolute top-[-26%] md:top-[-24%] lg:top-[-10%] xl:top-[-7%] right-[10%]"
             animate={{
               y: [0, -10, 0], // float up and down
             }}

@@ -44,7 +44,6 @@ import HeroData from "../components/HeroData";
 
 import assets from "../assets/assets";
 
-
 const ServiceDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -70,7 +69,7 @@ const ServiceDetail = () => {
       {/* Floating Back Button */}
       <button
         onClick={() => navigate(-1)}
-        className="fixed bottom-6 right-2 backdrop-blur-md bg-white/20 border border-white/30 aspect-square w-10 p-2 rounded-xl hover:bg-white/30 shadow-md transition z-50"
+        className="fixed bottom-6 left-2 backdrop-blur-md bg-white/20 border border-white/30 aspect-square w-10 p-2 rounded-xl hover:bg-white/30 shadow-md transition z-50"
         aria-label="Go Back"
       >
         <img
