@@ -125,7 +125,7 @@ function Testimonial() {
                       }
                       alt={currentTestimonial.author}
                       className={`aspect-square w-11 md:w-16 lg:w-20 bg-white rounded-2xl object-cover ${
-                        currentTestimonial.image ? "p-0" : "p-4"
+                        currentTestimonial.image ? "p-0" : "p-2  lg:p-4"
                       }`}
                     />
                     <StarRating
